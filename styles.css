@@ -1,0 +1,42 @@
+.btn {
+  font-size: 3rem;
+  border: 1px solid black;
+  /* display: inline; */
+  display: inline-block;
+  cursor: pointer;
+  background: rgb(34, 195, 188);
+  background: linear-gradient(
+    187deg,
+    rgba(34, 195, 188, 1) 4%,
+    rgba(41, 232, 231, 1) 17%,
+    rgba(41, 231, 206, 1) 68%,
+    rgba(45, 251, 253, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+
+.btn:hover{
+    background: red;
+    transform: scale(1.5);
+}
+
+input {
+    font-size: 3rem;
+    border-radius: 10px;
+}
+
+
+.test {
+    border: 1px solid black;
+    height: 2rem;;
+    width: 2rem;
+}
+
+.test:hover {
+    transform: scale(1.4);
+}
+
+.red {
+    background-color: red;
+}
