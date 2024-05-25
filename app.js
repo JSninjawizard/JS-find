@@ -47,52 +47,13 @@ const createUserNames = (accounts) => {
 createUserNames(accounts);
 console.log(accounts);
 
-//^ Exercise 1
-//^          create login page that will check if the user is in the system.
-const user = document.querySelector(".username");
-const password = document.querySelector(".code");
-const btn = document.querySelector(".btn");
-const text = document.querySelector(".text");
-const spanName = document.querySelector(".spanName");
-
-text.textContent = ''
-spanName.textContent = ''
-
-btn.addEventListener("click", () => {
-  console.log(user.value);
-  console.log(password.value);
-  //! -=
-  if (user.value === "") {
-    text.innerHTML = `Fill in all the required fileds <br> hit cmd+r`;
-    user.classList.add("red");
-  }
 
 
-  //@ >>- Working with find
-  const currentUser = accounts.find((x) => x.username === user.value);
-  console.log(currentUser);
-  if (currentUser === undefined) {
-    text.textContent = "No such user";
-  }
-  else if (currentUser?.code === Number(password.value)) {
-    text.textContent = `Welcome Back:`;
-    spanName.textContent = `${currentUser.owner}`;
-    spanName.classList.add("green");
-  } 
-  else if (currentUser?.code !== Number(password.value)) {
-    text.textContent = `Wrong Code`;
-    spanName.textContent = ""
-    password.classList.add('red')
-  }
- 
-  //@ >>- Working with for of
-  // for (const el of accounts) {
-  //     const usr = el.username
-  //     if (user.value === el.username) {
-  //         text.textContent = `Welcome Back, ${accounts.owner}`
-  //     }
-  //     else {
-  //         text.textContent = 'No such user'
-  //     }
-  // }
-});
+const logo = document.querySelector('.logo')
+const test = document.querySelector('.test')
+
+logo.addEventListener('click', () => {
+    logo.style.color = 'green'
+    test.classList.toggle('unseen')
+    
+})
