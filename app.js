@@ -1,12 +1,14 @@
 const accounts = [
     {
         owner: "Ahmed abu Shukraniye",
+        code: 111,
         profession: "Nurse",
         sector: "Medical Services",
         work: 'Kaplan'
     },
     {
         owner: "Basim ibn Abdaliye",
+        code: 222,
         profession: "Laboratory Specialist",
         sector: "Medical Services",
         work: "Yoseftal"
@@ -14,12 +16,14 @@ const accounts = [
     },
     {
         owner: "Carim abu Kaplaniye",
+        code: 333,
         profession: "Doctor",
         sector: "Medical Services",
         work: "Shneider"
     },
     {
         owner: "Darwish ibn Sanitariye",
+        code: 444,
         profession: "Nurse",
         sector: "Medical Services",
         work: "Beilinson"
@@ -40,7 +44,6 @@ const createUserNames = (accounts) => {
     })
 }
 createUserNames(accounts)
-
 console.log(accounts);
 
 //^ Exercise 1
