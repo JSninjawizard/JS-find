@@ -1,21 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Login</title>
-</head>
-<body>
-    <div class="input-container">
-        <input type="text" class="username" placeholder="username">
-        <input type="text" class="code" placeholder="code">
-        <div class="btn">&rarr;</div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container--logo">
+        <i class="fa-thin fa-person-to-portal logo"></i>
+      </div>
+      <div class="container--input">
+        <div class="container--input__username">
+          <input type="text" placeholder="username" class="username" />
+        </div>
+        <div class="container--code">
+          <input type="password" placeholder="code" class="code" />
+        </div>
+        <div class="container--enter">
+          <i class="fa-thin fa-right-to-bracket"></i>
+          <i class="fa-thin fa-door-closed"></i>
+          <i class="fa-thin fa-door-open"></i>
+        </div>
+      </div>
+      <div class="container--output">Welcome back</div>
+      <div class="container--login-via">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-github-alt"></i>
+      </div>
+      <div class="container--footer">
+        &copy; JsNinja
+      </div>
     </div>
-    <div class="output">
-        <h2 class="text">this is a text</h2>
-        <span class="spanName">this is span</span>
-    </div>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
