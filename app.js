@@ -82,12 +82,12 @@ btn.addEventListener('click', ()=>{
     if (currentUser === undefined) {
         text.textContent = 'No such user'
     }
-    else {
-    text.textContent = `Welcome Back:`
-    spanName.textContent = `${currentUser.owner}`
-    spanName.classList.add("green")
-    }
-
+    // else {
+    // text.textContent = `Welcome Back:`
+    // spanName.textContent = `${currentUser.owner}`
+    // spanName.classList.add("green")
+    // }
+    console.log(currentUser?.code);
 
         // if (currentUser.username === user.value) {
         //     text.textContent = `Welcome back, ${currentUser.owner}`
