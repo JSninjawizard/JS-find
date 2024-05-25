@@ -40,3 +40,23 @@ input {
 .red {
     background-color: red;
 }
+
+.green {
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all .6s ease-in;
+    color: green;
+    background-color: #cde4f8;
+}
+
+.spanName {
+    /* color: blue; */
+    font-size: 1.5rem;
+}
+
+.output {
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    gap: .5rem;
+}
