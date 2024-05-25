@@ -55,6 +55,9 @@ const btn = document.querySelector(".btn");
 const text = document.querySelector(".text");
 const spanName = document.querySelector(".spanName");
 
+text.textContent = ''
+spanName.textContent = ''
+
 btn.addEventListener("click", () => {
   console.log(user.value);
   console.log(password.value);
@@ -63,19 +66,7 @@ btn.addEventListener("click", () => {
     text.innerHTML = `Fill in all the required fileds <br> hit cmd+r`;
     user.classList.add("red");
   }
-  // if (user.value === "" && password.value === "") {
-  //     text.innerHTML = `Fill in all the required fileds <br> hit cmd+r`
-  //     user.classList.add('red')
-  //     password.classList.add('red')
-  // }
-  // if (user.value === "" && password.value !== "") {
-  //     text.innerHTML = `Fill in all the required fileds <br> hit cmd+r`
-  //     user.classList.add('red')
-  // }
-  // if (user.value !== "" && password.value === "") {
-  //     text.innerHTML = `Fill in all the required fileds <br> hit cmd+r`
-  //     password.classList.add('red')
-  // }
+
 
   //@ >>- Working with find
   const currentUser = accounts.find((x) => x.username === user.value);
@@ -89,23 +80,11 @@ btn.addEventListener("click", () => {
     spanName.classList.add("green");
   } 
   else if (currentUser?.code !== Number(password.value)) {
-    text.textContent = `Code Wrong`;
+    text.textContent = `Wrong Code`;
     spanName.textContent = ""
     password.classList.add('red')
   }
-  // else {
-  // text.textContent = `Welcome Back:`
-  // spanName.textContent = `${currentUser.owner}`
-  // spanName.classList.add("green")
-  //     }
-
-  // if (currentUser.username === user.value) {
-  //     text.textContent = `Welcome back, ${currentUser.owner}`
-  // }
-  // else {
-  //     text.textContent = "no such user"
-  // }
-
+ 
   //@ >>- Working with for of
   // for (const el of accounts) {
   //     const usr = el.username
