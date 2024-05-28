@@ -50,10 +50,10 @@ console.log(accounts);
 
 
 const logo = document.querySelector('.logo')
-const test = document.querySelector('.test')
+const test = document.querySelector('.rest-container')
 
 logo.addEventListener('click', () => {
     logo.style.color = 'green'
     test.classList.toggle('unseen')
-    
+
 })

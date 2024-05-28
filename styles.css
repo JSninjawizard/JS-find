@@ -7,20 +7,26 @@
 }
 
 body {
-    background-image: url('https://source.unsplash.com/random/');
+    background-image: url('https://picsum.photos/800');
+    background-image: url('https://fastly.picsum.photos/id/93/800/800.jpg?hmac=H6VASMmFssnKDZ4SVLCmG3wZZUTmpdOZ8sjWRjGyIeo');
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
 }
 
 .container {
     border: 1px solid black;
+    border-radius: 10px 0px 10px 0px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 1rem;
     margin: 0 auto;
     margin-top: 3rem;
     padding: 2rem;
     width: 30vw;
+    backdrop-filter: blur(10px) grayscale(30%);
+    
 }
 
 .logo {
@@ -36,20 +42,98 @@ body {
     /* background-color: antiquewhite; */
 }
 
-.container--input__username {
-    background-color: rgb(178, 54, 54);
+.container--input__username,
+.container--input__code {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-.test {
+.input-username,
+.input-code {
+    translate: -1.5rem;
+    transition: all 0.3s ease-in;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.input-username:focus, 
+.input-code:focus, 
+.input-username:not(:placeholder-shown),
+.input-code:not(:placeholder-shown) {
+    translate: 0rem;
+    outline: none;
+}
+
+
+.user-icon {
+    /* font-size: 1.5rem; */
+}
+
+.rest-container {
     transition: all .5s ease;
     opacity: 1;
     pointer-events: all;
 }
 
-.unseen {
-    /* display: none; */
-    opacity:0;
-    pointer-events: none;
-    transform: translateX(-8rem);
+
+.container--login-via {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.container--login-via--inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    border: 1px solid;
+    padding: 1rem;
+    border-radius: 10px 0 10px 0;
+    margin:4rem 0;
+}
+
+.container--login-via__brands {
+    display: flex;
+    gap: .5rem;
+    cursor:pointer;
+}
+
+.brands{
+    transition: all 0.3s ease;
+}
+
+.f:hover {
+    color: #1877F2;
+}
+
+.in:hover {
+    color: #0a66c2
+}
+
+.alt:hover {
+    color: #2b3137	
+}
+
+
+.brands:hover {
+    transform: translateY(-.3rem);
+}
+
+.container--footer {
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+}
+/* @ custom classes */
+/* .unseen {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-8rem);
+} */
+
+.hide {
+    display: none;
+}
