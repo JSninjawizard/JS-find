@@ -51,9 +51,18 @@ console.log(accounts);
 
 const logo = document.querySelector('.logo')
 const test = document.querySelector('.rest-container')
+const username = document.querySelector('.input-username')
+const code = document.querySelector('.input-code')
+
+username.addEventListener('click', () => {
+  console.log(username.value);
+  
+})
+
 
 logo.addEventListener('click', () => {
     logo.style.color = 'green'
     test.classList.toggle('unseen')
 
 })
+

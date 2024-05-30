@@ -29,6 +29,10 @@ body {
     
 }
 
+.container--logo {
+    margin: 1rem  0rem;
+}
+
 .logo {
     font-size: 3rem;
     color: red;
@@ -74,6 +78,17 @@ body {
     transition: all .5s ease;
     opacity: 1;
     pointer-events: all;
+}
+
+.container--enter {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: start;
+    margin: 2rem 0;
+}
+
+.closed-door {
+    font-size: 2rem;
 }
 
 
@@ -135,5 +150,9 @@ body {
 } */
 
 .hide {
+    display: none;
+}
+
+.disable {
     display: none;
 }
