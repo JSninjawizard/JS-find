@@ -146,6 +146,15 @@ const accounts = [
     });
   };
   createAcronym(accounts);
+// console.log(accounts);
+
+const createCode = (accounts) => {
+  accounts.forEach((account,a,b) => {
+    account.code = Number(`${a+1}${a+1}${a+1}`)
+    // console.log(`${a+1}${a+1}${a+1}`);
+  })
+}
+createCode(accounts)
 console.log(accounts);
 
 const logo = document.querySelector('.logo')
@@ -199,9 +208,19 @@ closedDoor.addEventListener('click', () =>{
     const userString = userNameArr.toString()
     const codeString = codeArr.toString()
 
-    accounts.find(x => {
-        // console.log(x);
-        console.log(x.acronym);
-    })
-    closedDoor.classList.add('animate')
+    const currentUser = accounts.find((x) => x.acronym === userString)
+    // console.log(currentUser);
+    
+    if (currentUser === undefined) {
+      closedDoor.classList.add('animate')
+    } 
+    else if (currentUser?.code === Number(codeString)) {
+      console.log(currentUser.owner);
+    }
+    else if (currentUser?.code !== Number(codeString)) {
+      console.log('wrong');
+      closedDoor.classList.add('animate')
+    }
+
+
 })
