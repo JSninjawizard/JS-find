@@ -38,6 +38,10 @@ body {
     color: red;
 }
 
+.green {
+    color: green;
+}
+
 .logo:hover {
     cursor: pointer;
 }
@@ -70,8 +74,11 @@ body {
 }
 
 
-.user-icon {
+.user-icon,
+.lock-icon {
     /* font-size: 1.5rem; */
+    transition: all 0.6s ease;
+    
 }
 
 .rest-container {
@@ -132,7 +139,6 @@ body {
     color: #2b3137	
 }
 
-
 .brands:hover {
     transform: translateY(-.3rem);
 }
@@ -142,8 +148,9 @@ body {
     justify-content: center;
     gap: .4rem;
 }
+
 /* @ custom classes */
-/* .unseen {
+/* .hidden {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-8rem);
@@ -155,4 +162,49 @@ body {
 
 .disable {
     display: none;
+}
+
+
+.not-empty {
+    color: rgb(85, 85, 48);
+    transition: all 0.3s ease-in;
+    font-weight: bold;
+}
+
+.closed-door {
+     cursor: pointer;
+    }
+    
+    .animate {
+        animation: myAnim 0.5s ease 0s 1 normal forwards;
+        font-size: 2rem;
+        color:red;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+
+	80% {
+		transform: translateX(8px);
+	}
+
+	90% {
+		transform: translateX(-8px);
+	}
 }
