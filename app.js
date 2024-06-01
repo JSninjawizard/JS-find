@@ -209,8 +209,12 @@ code.addEventListener('blur', (e) => {
 
 
 closedDoor.addEventListener('click', () =>{
-    const userString = userNameArr.toString()
-    const codeString = codeArr.toString()
+    // const userString = userNameArr.toString()
+    // const codeString = codeArr.toString()
+    const userString = username.value
+    const codeString = code.value
+    console.log(userString);;
+    console.log(codeString);;
 
     const currentUser = accounts.find((x) => x.acronym === userString)
     // console.log(currentUser);
