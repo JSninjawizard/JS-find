@@ -158,17 +158,21 @@ createCode(accounts)
 console.log(accounts);
 
 const logo = document.querySelector('.logo')
-const test = document.querySelector('.rest-container')
+const bodyContainer = document.querySelector('.body-container')
 const username = document.querySelector('.input-username')
 const code = document.querySelector('.input-code')
 const userIcon = document.querySelector('.user-icon')
 const lockIcon = document.querySelector('.lock-icon')
+//@Icons
 const closedDoor = document.querySelector('.closed-door')
-
+const openedDoor = document.querySelector('.opened-door')
+//@Message 
+const welcomeMsg = document.querySelector('.output__msg')
+const owner = document.querySelector('.output__owner')
 
 logo.addEventListener('click', () => {
     logo.classList.toggle('green')
-    test.classList.toggle('hidden')
+    bodyContainer.classList.toggle('hidden')
     
 })
 
@@ -214,13 +218,23 @@ closedDoor.addEventListener('click', () =>{
     if (currentUser === undefined) {
       closedDoor.classList.add('animate')
     } 
-    else if (currentUser?.code === Number(codeString)) {
-      console.log(currentUser.owner);
-    }
+
     else if (currentUser?.code !== Number(codeString)) {
       console.log('wrong');
       closedDoor.classList.add('animate')
     }
+    
+    else if (currentUser?.code === Number(codeString)) {
+      console.log(currentUser.owner);
 
+      closedDoor.classList.add('hide-door')
+      openedDoor.classList.remove('abs')
+      openedDoor.classList.add('show-door')
+
+      welcomeMsg.textContent = `Welcome Back`
+      welcomeMsg.classList.add('welcome-show')
+      owner.textContent = currentUser.owner
+      owner.classList.add('owner-show')
+    }
 
 })
