@@ -25,7 +25,8 @@ body {
   margin-top: 3rem;
   padding: 2rem;
   width: 30vw;
-  backdrop-filter: blur(10px) grayscale(30%);
+  backdrop-filter: blur(10px) grayscale(30%) 
+  invert(70%);
 }
 
 .container--logo {
@@ -253,6 +254,7 @@ body {
   position: absolute;
   transform: translateX(0rem);
   opacity: 1;
+  transition: all 1s ease;
 }
 
 .welcome-show {

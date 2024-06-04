@@ -235,7 +235,7 @@ closedDoor.addEventListener('click', () =>{
       openedDoor.classList.remove('abs')
       openedDoor.classList.add('show-door')
 
-      welcomeMsg.textContent = `Welcome Back`
+      welcomeMsg.textContent = `Welcome Back: `
       welcomeMsg.classList.add('welcome-show')
       owner.textContent = currentUser.owner
       owner.classList.add('owner-show')
