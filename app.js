@@ -173,6 +173,12 @@ const owner = document.querySelector('.output__owner')
 logo.addEventListener('click', () => {
     logo.classList.toggle('green')
     bodyContainer.classList.toggle('hidden')
+    if (bodyContainer.classList.contains('hidden')) {
+      location.reload()
+      // username.value = ''
+      // code.value = ''
+
+    }
     
 })
 
