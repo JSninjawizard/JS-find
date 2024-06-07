@@ -199,7 +199,7 @@ username.addEventListener("blur", (e) => {
 
 username.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    val();
+    validate();
   }
 });
 
@@ -219,17 +219,17 @@ code.addEventListener("blur", (e) => {
 
 code.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    val();
+    validate();
   }
 });
 
 closedDoor.addEventListener("click", () => {
   // const userString = userNameArr.toString()
   // const codeString = codeArr.toString()
-  val();
+  validate();
 });
 
-function val() {
+function validate() {
   const userString = username.value;
   const codeString = code.value;
   console.log(userString);

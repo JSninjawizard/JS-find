@@ -24,7 +24,7 @@ body {
   margin-top: 3rem;
   padding: 2rem;
   width: 30vw;
-  backdrop-filter: blur(10px) grayscale(30%) 
+  backdrop-filter: blur(10px) grayscale(30%)
   invert(70%);
 }
 
@@ -134,67 +134,92 @@ body {
   opacity: 0;
 }
 
-.container--login-via {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+/*+ Login Container*/
+.container--login {
+    /* border: 1px solid; */
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
 }
 
-.container--login-via--inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  border: 1px solid;
-  padding: 1rem;
-  margin: 4rem 0;
-  font-size: 1.2rem;
-  padding: .5rem 2rem;
+.container--login > * {
+    /* border: 1px red solid; */
+}
+
+/*+ New User & Login*/
+.container--login__new-user,
+.container--login-via {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem;
+    gap: .5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container--login__new-user {
+    transition: all .4s ease-in;
+}
+
+.container--login__new-user:hover {
+    background-color: bisque;
+}
+
+.container--login__new-user:hover .new-user:active {
+    color: #1c5aa5;
+    font-weight: 500;
+    transform: scale(.95);
+}
+
+.new-user {
+    font-size: 1.5rem;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .container--login-via__brands {
-  display: flex;
-  gap: 0.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .brands {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .f:hover {
-  color: #1877f2;
+    color: #1877f2;
 }
 
 .in:hover {
-  color: #0a66c2;
+    color: #0a66c2;
 }
 
 .alt:hover {
-  color: #2b3137;
+    color: #2b3137;
 }
 
 .brands:hover {
-  transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem);
 }
 
+/*_ Footer Container*/
 .container--footer {
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+    margin: 3rem 0;
 }
 
 /* @ custom classes */
 .hidden {
-  opacity: 0;
+  /* opacity: 0;
   pointer-events: none;
   transform: translateX(-8rem);
-  transform: translateX(-8rem);
+  transform: translateX(-8rem); */
 }
 
 .not-empty {
