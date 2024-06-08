@@ -23,11 +23,12 @@ body {
   margin: 0 auto;
   margin-top: 3rem;
   padding: 2rem;
-  width: 30vw;
+  width: 31vw;
   backdrop-filter: blur(10px) grayscale(30%)
-  invert(70%);
+  /* invert(70%); */
 }
 
+/*! Logo */
 .container--logo {
   margin: 1rem 0rem;
 }
@@ -37,14 +38,19 @@ body {
   color: red;
 }
 
-.green {
-  color: green;
-}
-
 .logo:hover {
   cursor: pointer;
 }
 
+/*! Body of Container */
+.body-container {
+    transition: all 0.5s ease;
+    opacity: 1;
+    pointer-events: all;
+    width: 14rem;
+  }
+
+/*! Container Input */
 .container--input__username,
 .container--input__code {
   display: flex;
@@ -75,17 +81,24 @@ body {
   transform: translateX(1.2rem);
 }
 
+/*! Container Output */
+.container--output {
+  margin: 2rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/*! Container Output Icons */
+.container--output__icon {
+  display: flex;
+  align-items: center;
+}
+
 .user-icon,
 .lock-icon {
   margin: 0 0.2rem;
   position: absolute;
   font-weight: 300;
-}
-
-.body-container {
-  transition: all 0.5s ease;
-  opacity: 1;
-  pointer-events: all;
 }
 
 .closed-door,
@@ -97,16 +110,6 @@ body {
   cursor: pointer;
 }
 
-.container--output {
-  margin: 2rem 0;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.container--output__icon {
-  display: flex;
-}
-
 .opened-door {
   position: absolute;
   transform: translateX(-5rem);
@@ -114,12 +117,15 @@ body {
   transition: all 0.7s ease;
 }
 
+/*! Container Output Message */
 .container--output__msg {
   display: flex;
   gap: 0.2rem;
-  align-items: center;
+  align-items: start;
+  flex-direction: column;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+
 }
 
 .output__msg {
@@ -129,21 +135,24 @@ body {
 }
 
 .output__owner {
-  transform: translateY(3rem);
+  transform: translateX(4rem);
   transition: all 0.6s ease-in;
   opacity: 0;
+
 }
 
 /*+ Login Container*/
 .container--login {
-    /* border: 1px solid; */
     display: flex;
-    padding: .5rem;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: all 0.5s ease;
+
 }
 
 .container--login > * {
     /* border: 1px red solid; */
+
 }
 
 /*+ New User & Login*/
@@ -155,6 +164,7 @@ body {
     padding: .5rem;
     gap: .5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .container--login__new-user {
@@ -214,12 +224,21 @@ body {
     margin: 3rem 0;
 }
 
+/*_ Details Container*/
+.body-container__details {
+    
+}
+
 /* @ custom classes */
+.green {
+    color: green;
+  }
+
 .hidden {
-  /* opacity: 0;
+  opacity: 0;
   pointer-events: none;
   transform: translateX(-8rem);
-  transform: translateX(-8rem); */
+  transform: translateX(-8rem);
 }
 
 .not-empty {
@@ -288,7 +307,45 @@ body {
 }
 
 .owner-show {
-  transform: translateY(0rem);
+  transform: translateX(0rem);
   transition: all 0.7s ease-in;
   opacity: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}
+
+.hide-login-container {
+    transform: translateY(15rem);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    transition-behavior: allow-discrete;
+}
+
+.hide-footer-container {
+    transform: translateY(10rem);
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+    transition: all 0.4s ease;
+    transition-behavior: allow-discrete;
+}
+
+.margin0 {
+    margin: 0;
+    transition: all .4s ease;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    transition: all .6s ease;
+    transition-behavior: allow-discrete;
+}
+
+.show-details {
+    transition-behavior: allow-discrete;
+    opacity: 1;
+    transition: all .6s ease;
 }

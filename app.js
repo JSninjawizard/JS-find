@@ -158,7 +158,6 @@ createCode(accounts);
 console.log(accounts);
 
 const logo = document.querySelector(".logo");
-const bodyContainer = document.querySelector(".body-container");
 const username = document.querySelector(".input-username");
 const code = document.querySelector(".input-code");
 const userIcon = document.querySelector(".user-icon");
@@ -169,6 +168,20 @@ const openedDoor = document.querySelector(".opened-door");
 //@Message
 const welcomeMsg = document.querySelector(".output__msg");
 const owner = document.querySelector(".output__owner");
+//@Containers
+const loginContainer = document.querySelector(".container--login");
+const bodyContainer = document.querySelector(".body-container");
+const footerContainer = document.querySelector(".container--footer");
+const inputContainer = document.querySelector(".container--input");
+const outputContainer = document.querySelector(".container--output");
+const detailsContainer = document.querySelector(".body-container__details");
+
+//@More Info
+const moreDetails = document.querySelector(".output__more-details");
+const job = document.querySelector(".output__more-details--job");
+const tel = document.querySelector(".output__more-details--tel");
+
+
 
 logo.addEventListener("click", () => {
   logo.classList.toggle("green");
@@ -254,5 +267,19 @@ function validate() {
     welcomeMsg.classList.add("welcome-show");
     owner.textContent = currentUser.owner;
     owner.classList.add("owner-show");
+
+    // !remove irrelevant items
+    loginContainer.classList.add('hide-login-container')
+    footerContainer.classList.add('hide-footer-container')
+    // inputContainer.classList.add('hide-footer-container')
+    outputContainer.classList.add('margin0')
+
+    inputContainer.classList.add('hide')
+    // bodyContainer.classList.add('hide')
+    // detailsContainer.classList.remove('hide')
+
+    // !show more info
+    job.textContent = `Job: ${currentUser.Job}`
+    tel.textContent = `Tel: ${currentUser.tel}`
   }
 }
