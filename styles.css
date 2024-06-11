@@ -10,6 +10,7 @@ body {
   background-image: url("https://picsum.photos/1500/900");
   /* background-image: url("https://fastly.picsum.photos/id/93/800/800.jpg?hmac=H6VASMmFssnKDZ4SVLCmG3wZZUTmpdOZ8sjWRjGyIeo"); */
   /* background-image: url("https://fastly.picsum.photos/id/448/1500/900.jpg?hmac=3ZFxsbbHO5qufNaZUHCUaT0j_-saEs8zBi3BfUbLNC4"); */
+  background-image: url("https://fastly.picsum.photos/id/1001/1500/900.jpg?hmac=jsRA3nig97Yv0agVvWcBO1hQhim74uuquK2HcqpUPtc");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,7 +24,9 @@ body {
   margin: 0 auto;
   margin-top: 3rem;
   padding: 2rem;
-  width: 31vw;
+  width: 25rem;
+  height: 80vh;
+  /* width: 31rem; */
   backdrop-filter: blur(10px) grayscale(30%)
   /* invert(70%); */
 }
@@ -47,7 +50,8 @@ body {
     transition: all 0.5s ease;
     opacity: 1;
     pointer-events: all;
-    width: 14rem;
+    width: 15rem;
+    height: 70%;
   }
 
 /*! Container Input */
@@ -181,7 +185,7 @@ body {
     transform: scale(.95);
 }
 
-.new-user {
+.new-user-icon {
     font-size: 1.5rem;
     font-weight: 300;
     cursor: pointer;
@@ -221,7 +225,7 @@ body {
     gap: 0.4rem;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    margin: 3rem 0;
+    margin-top: 5rem;
 }
 
 /*_ Details Container*/
@@ -338,7 +342,7 @@ body {
 }
 
 .hide {
-    display: none;
+    /* display: none; */
     opacity: 0;
     transition: all .6s ease;
     transition-behavior: allow-discrete;
@@ -348,4 +352,36 @@ body {
     transition-behavior: allow-discrete;
     opacity: 1;
     transition: all .6s ease;
+}
+
+/* modal */
+.new-user-modal {
+  background-color: aqua;
+  background-color: #F9F6EE;
+  border: 1px solid rgb(5, 22, 31);
+  height: 30rem;
+  width: 30rem;;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.4s ease;
+}
+
+
+.hide-modal {
+  z-index: -1;
+  opacity:0;
+}
+
+.overlay {
+  background-color: #071e3579;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transition: all 2s ease;
+}
+
+.hide-overlay {
+  opacity: 0;
+  z-index: -1;
 }

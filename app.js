@@ -157,6 +157,7 @@ const createCode = (accounts) => {
 createCode(accounts);
 console.log(accounts);
 
+const overlay = document.querySelector(".overlay");
 const logo = document.querySelector(".logo");
 const username = document.querySelector(".input-username");
 const code = document.querySelector(".input-code");
@@ -165,6 +166,8 @@ const lockIcon = document.querySelector(".lock-icon");
 //@Icons
 const closedDoor = document.querySelector(".closed-door");
 const openedDoor = document.querySelector(".opened-door");
+const newUserIcon = document.querySelector(".new-user-icon");
+
 //@Message
 const welcomeMsg = document.querySelector(".output__msg");
 const owner = document.querySelector(".output__owner");
@@ -181,6 +184,8 @@ const moreDetails = document.querySelector(".output__more-details");
 const job = document.querySelector(".output__more-details--job");
 const tel = document.querySelector(".output__more-details--tel");
 
+//@New user modal
+const newUserModal = document.querySelector(".new-user-modal");
 
 
 logo.addEventListener("click", () => {
@@ -275,11 +280,27 @@ function validate() {
     outputContainer.classList.add('margin0')
 
     inputContainer.classList.add('hide')
-    // bodyContainer.classList.add('hide')
-    // detailsContainer.classList.remove('hide')
+    bodyContainer.classList.add('hide')
+    detailsContainer.classList.remove('hide')
 
     // !show more info
     job.textContent = `Job: ${currentUser.Job}`
     tel.textContent = `Tel: ${currentUser.tel}`
   }
 }
+
+newUserModal.addEventListener('click', (e) => {
+
+})
+
+newUserIcon.addEventListener('click', () => {
+  newUserModal.classList.remove('hide-modal')
+  overlay.classList.remove('hide-overlay')
+  console.log('was clicked');
+  
+})
+
+overlay.addEventListener('click', () => {
+  newUserModal.classList.add('hide-modal')
+  overlay.classList.add('hide-overlay')
+})

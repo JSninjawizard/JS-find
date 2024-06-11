@@ -31,7 +31,41 @@
     <title>Login</title>
   </head>
   <body>
+    <div class="overlay hide-overlay"></div>
     <div class="container">
+      <div class="new-user-modal hide-modal">
+        <div class="new-user new-user-job job">
+          <div class="job__title">Job:</div>
+          <input type="text" class="job__input">
+        </div>
+        <div class="new-user new-user-address address">
+          <div class="address__title">Address:</div>
+          <input type="text" class="address__input">
+        </div>
+        <div class="new-user new-user-city city">
+          <div class="city">City:</div>
+          <input type="text" class="city__input">
+        </div>
+        <div class="new-user new-user-code code">
+          <div class="code">Code:</div>
+          <input type="text" class="code__input">
+        </div>
+        <div class="new-user new-user-email email">
+          <div class="email">Email:</div>
+          <input type="text" class="email__input">
+        </div>
+        <div class="new-user new-user-owner owner">
+          <div class="owner">Owner:</div>
+          <input type="text" class="owner__input">
+        </div>
+        <div class="new-user new-user-tel tel">
+          <div class="tel">Telephone:</div>
+          <input type="number" class="tel__input">
+        </div>
+        <div class="new-user-reg">
+          <button class="new-user-reg__btn">register</button>
+        </div>
+      </div>
       <div class="container--logo">
         <i class="fa-thin fa-power-off logo"></i>
       </div>
@@ -71,7 +105,7 @@
         <div class="container--login">
           <div class="container--login__new-user">
             <p class="container--login__text">New User</p>
-            <i class="fa-thin fa-user-plus new-user"></i>
+            <i class="fa-thin fa-user-plus new-user-icon"></i>
           </div>
           <div class="container--login-via">
             <p class="container--login-via__text">Login with</p>
