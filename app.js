@@ -304,3 +304,30 @@ overlay.addEventListener('click', () => {
   newUserModal.classList.add('hide-modal')
   overlay.classList.add('hide-overlay')
 })
+
+
+//@ Testing Modal New user
+const jobInput = document.querySelector(".job__input")
+const addressInput = document.querySelector(".address__input")
+
+
+jobInput.addEventListener("click", (e) => {
+  jobInput.classList.add('remove')
+  
+})
+
+jobInput.addEventListener("blur", (e) => {
+  jobInput.classList.remove('remove')
+
+})
+
+addressInput.addEventListener("click", (e) => {
+  addressInput.classList.add('remove')
+  
+})
+
+addressInput.addEventListener("blur", (e) => {
+  addressInput.classList.remove('remove')
+
+})
+

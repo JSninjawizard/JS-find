@@ -1,0 +1,114 @@
+
+.new-user-modal {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-container {
+    border: 3px salmon solid;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-container__title {
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+
+}
+
+.modal-container__body {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: .5rem
+}
+
+
+.modal-container__btn {
+    border: 2px solid olive;
+}
+
+.remove::placeholder {
+    color: red;
+    transform: translateX(10rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Inputs */
+.job__input,
+.address__input,
+.city__input,
+.code__input,
+.email__input,
+.owner__input,
+.tel__input {
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+
+/* Placeholders */
+.job__input::placeholder,
+.address__input::placeholder,
+.city__input::placeholder,
+.code__input::placeholder,
+.email__input::placeholder,
+.owner__input::placeholder,
+.tel__input::placeholder {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 3s ease;
+    /* font-style: italic; */
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+
+/* Address */
+.address__input {
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+.address__input::placeholder {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 3s ease;
+    /* font-style: italic; */
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.address::placeholder {
+    color: red;
+    transform: translateX(10rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* City */
+.city__input {
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+.city__input::placeholder {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 3s ease;
+    /* font-style: italic; */
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.address::placeholder {
+    color: red;
+    transform: translateX(10rem);
+    opacity: 0;
+    pointer-events: none;
+}

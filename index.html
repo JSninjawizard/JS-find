@@ -28,49 +28,59 @@
       href="https://site-assets.fontawesome.com/releases/v6.5.2/css/sharp-light.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="new-user.css" />
     <title>Login</title>
   </head>
   <body>
     <div class="overlay hide-overlay"></div>
     <div class="container">
       <div class="new-user-modal hide-modal">
-        <div class="new-user new-user-job job">
-          <i class="fa-thin fa-suitcase"></i>
-          <div class="job__title">Job:</div>
-          <input type="text" class="job__input">
-        </div>
-        <div class="new-user new-user-address address">
-          <i class="fa-thin fa-address-card"></i>
-          <div class="address__title">Address:</div>
-          <input type="text" class="address__input">
-        </div>
-        <div class="new-user new-user-city city">
-          <i class="fa-thin fa-city"></i>
-          <div class="city">City:</div>
-          <input type="text" class="city__input">
-        </div>
-        <div class="new-user new-user-code code">
-          <i class="fa-thin fa-lock-keyhole"></i>
-          <div class="code">Code:</div>
-          <input type="text" class="code__input">
-        </div>
-        <div class="new-user new-user-email email">
-          <i class="fa-thin fa-at"></i>
-          <div class="email">Email:</div>
-          <input type="text" class="email__input">
-        </div>
-        <div class="new-user new-user-owner owner">
-          <i class="fa-thin fa-input-text"></i>
-          <div class="owner">Owner:</div>
-          <input type="text" class="owner__input">
-        </div>
-        <div class="new-user new-user-tel tel">
-          <i class="fa-thin fa-phone"></i>
-          <div class="tel">Telephone:</div>
-          <input type="number" class="tel__input">
-        </div>
-        <div class="new-user-reg">
-          <button class="new-user-reg__btn">register</button>
+        <div class="modal-container">
+          <div class="modal-container__title">
+            <div class="new-user-title">Let's Register</div>
+          </div>
+          <div class="modal-container__body">
+            <div class="new-user new-user-job job">
+              <!-- <i class="fa-thin fa-suitcase"></i> -->
+              <!-- <div class="job__title">Job:</div> -->
+              <input type="text" class="job__input" placeholder="Job">
+            </div>
+            <div class="new-user new-user-address address">
+              <!-- <i class="fa-thin fa-address-card"></i> -->
+              <!-- <div class="address__title">Address:</div> -->
+              <input type="text" class="address__input" placeholder="Address"">
+            </div>
+            <div class="new-user new-user-city city">
+              <!-- <i class="fa-thin fa-city"></i> -->
+              <!-- <div class="city">City:</div> -->
+              <input type="text" class="city__input" placeholder="City">
+            </div>
+            <div class="new-user new-user-code code">
+              <!-- <i class="fa-thin fa-lock-keyhole"></i> -->
+              <!-- <div class="code">Code:</div> -->
+              <input type="text" class="code__input" placeholder="Password">
+            </div>
+            <div class="new-user new-user-email email">
+              <!-- <i class="fa-thin fa-at"></i> -->
+              <!-- <div class="email">Email:</div> -->
+              <input type="text" class="email__input" placeholder="Email">
+            </div>
+            <div class="new-user new-user-owner owner">
+              <!-- <i class="fa-thin fa-input-text"></i> -->
+              <!-- <div class="owner">Owner:</div> -->
+              <input type="text" class="owner__input" placeholder="Your Name">
+            </div>
+            <div class="new-user new-user-tel tel">
+              <!-- <i class="fa-thin fa-phone"></i> -->
+              <!-- <div class="tel">Telephone:</div> -->
+              <input type="number" class="tel__input" placeholder="Phone">
+            </div>
+          </div>
+            <div class="modal-container__btn">
+              <div class="new-user-reg">
+                <button class="new-user-reg__btn">register</button>
+              </div>
+            </div>
         </div>
       </div>
       <div class="container--logo">
