@@ -30,10 +30,10 @@
 
 
 .modal-container__btn {
-    border: 2px solid olive;
+    /* border: 2px solid olive; */
 }
 
-.remove::placeholder {
+.remove-placeholder::placeholder {
     color: red;
     transform: translateX(10rem);
     opacity: 0;
@@ -90,15 +90,13 @@
     padding: 0 0.4rem;
     pointer-events: none;
     opacity: 0;
-    border: 1px solid;
-
 }
 
 .show-eyes {
     transform: translateX(0rem);
     opacity: 1;
     pointer-events: all;
-
+    z-index: 4;
 }
 
 
@@ -110,10 +108,17 @@
 }
 
 .new-user-reg__btn {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: none;
     display: flex;
     width: 100%;
-    justify-content: stretch;
+    justify-content: center;
+    background-color: cadetblue;
+    padding: .3rem 1rem;
+    cursor: pointer;
+}
+
+.new-user-reg__btn:active {
+    transform: scale(0.98);
 }
