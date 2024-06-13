@@ -50,7 +50,12 @@ codeInput.addEventListener("blur", (e) => {
 })
 
 eyes.addEventListener('click', () => {
+  console.log(codeInput.type);
+  if (codeInput.type === "password") {
     codeInput.type = 'text'
+  } else if (codeInput.type === "text") {
+    code.type = 'password'
+  }
 })
 
 emailInput.addEventListener("click", (e) => {

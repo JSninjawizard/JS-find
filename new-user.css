@@ -104,5 +104,16 @@
 
 
 /* @ Button */
-.new-user-reg {}
-.new-user-reg__btn {}
+.new-user-reg {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.new-user-reg__btn {
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+}
