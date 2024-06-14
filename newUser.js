@@ -37,7 +37,7 @@ codeInput.addEventListener("click", (e) => {
   codeInput.classList.add("remove-placeholder");
     // eyes.classList.add("show-eyes");
   });
-  
+
   codeInput.addEventListener('input', (e) => {
     if (e.target.value !== "") {
       eyes.classList.add("show-eyes");
@@ -92,8 +92,22 @@ telInput.addEventListener("blur", (e) => {
 });
 
 regBtn.addEventListener('click', ()=>{
-  const o = new Object()
-  o.job = jobInput.value
-  o.address = addressInput.value
-  console.log(o);
+    console.log(jobInput.value);
+    if (jobInput.value === "") {
+        const jeob = document.querySelector('.job')
+        jeob.classList.add("not-validated")
+    }
+
+  const account = new Object()
+  account.job = jobInput.value
+  account.address = addressInput.value
+  account.city = cityInput.value
+  account.code = codeInput.value
+  account.email = emailInput.value
+  account.owner = ownerInput.value
+  account.tel = telInput.value
+  accounts.push(account)
+  createAcronym(accounts);
+  console.log(accounts);
 })
+

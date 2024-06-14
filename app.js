@@ -155,7 +155,7 @@ const createCode = (accounts) => {
   });
 };
 createCode(accounts);
-console.log(accounts);
+console.log(accounts[0]);
 
 const overlay = document.querySelector(".overlay");
 const logo = document.querySelector(".logo");

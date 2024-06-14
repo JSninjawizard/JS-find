@@ -121,3 +121,35 @@
 .new-user-reg__btn:active {
     transform: scale(0.98);
 }
+
+
+
+/* Test zone */
+.job {
+    position: relative;
+}
+.job::before {
+    background-color: red;
+    content: '';
+    position: absolute;
+    height: .1rem;
+    width: 100%;
+    bottom: 0;
+    transform: translateX(-17rem);
+    /* opacity: 0; */
+    transform-origin: bottom left;
+    transition: all .5rem ease-in;
+
+}
+
+.not-validated::before {
+    background-color: red;
+    content: '';
+    position: absolute;
+    height: .1rem;
+    width: 100%;
+    bottom: 0;
+    transform: translateX(0rem);
+    opacity: 1;
+    transition: all .5rem ease-in;
+}
