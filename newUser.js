@@ -49,6 +49,7 @@ codeInput.addEventListener("click", (e) => {
 codeInput.addEventListener("blur", (e) => {
   codeInput.classList.remove("remove-placeholder");
   // eyes.classList.remove('show-eyes')
+  console.log(e.target);
 });
 
 eyes.addEventListener("click", () => {
@@ -91,7 +92,8 @@ telInput.addEventListener("blur", (e) => {
 });
 
 regBtn.addEventListener('click', ()=>{
-  const pizda = []
-  pizda.push(jobInput.value)
-  console.log(pizda);
+  const o = new Object()
+  o.job = jobInput.value
+  o.address = addressInput.value
+  console.log(o);
 })
