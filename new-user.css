@@ -167,3 +167,18 @@
     transition: all .3s ease-in;
     border-bottom: .2rem solid rgba(10, 227, 50, 0.863);
 }
+
+.close-modal {
+    /* lehaif smola */
+    transition-property: opacity;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.close-overlay {
+    /* lehaif smola */
+}
+  
+  .delay-1 {
+    transition-delay: .4s;
+  }
