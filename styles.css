@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("https://picsum.photos/1500/900");
+  background-image: url("https://picsum.photos/1500/1000");
   /* background-image: url("https://fastly.picsum.photos/id/93/800/800.jpg?hmac=H6VASMmFssnKDZ4SVLCmG3wZZUTmpdOZ8sjWRjGyIeo"); */
   /* background-image: url("https://fastly.picsum.photos/id/448/1500/900.jpg?hmac=3ZFxsbbHO5qufNaZUHCUaT0j_-saEs8zBi3BfUbLNC4"); */
   background-image: url("https://fastly.picsum.photos/id/1001/1500/900.jpg?hmac=jsRA3nig97Yv0agVvWcBO1hQhim74uuquK2HcqpUPtc");
@@ -369,8 +369,8 @@ body {
 
 
 .hide-modal {
-  /* z-index: -1;
-  opacity:0; */
+  z-index: -1;
+  opacity:0;
 }
 
 .overlay {

@@ -289,11 +289,8 @@ function validate() {
   }
 }
 
-newUserModal.addEventListener('click', (e) => {
 
-})
-
-newUserIcon.addEventListener('click', () => {
+newUserIcon.addEventListener('click', (e) => {
   newUserModal.classList.remove('hide-modal')
   overlay.classList.remove('hide-overlay')
   console.log('was clicked');
@@ -304,4 +301,3 @@ overlay.addEventListener('click', () => {
   newUserModal.classList.add('hide-modal')
   overlay.classList.add('hide-overlay')
 })
-
