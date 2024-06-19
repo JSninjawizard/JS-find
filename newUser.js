@@ -127,6 +127,7 @@ regBtn.addEventListener("click", () => {
     telInput.value !== ""
   ) {
     validatedNewUser ()
+    closeModal()
   }
   else 
   {
@@ -212,6 +213,9 @@ function validatedNewUser () {
   telDiv.classList.add("validated");
 }
 
-function closeModal () {
-  
+function closeModal (
+) { 
+  // const mod = document.querySelector('.new-user-modal')
+  newUserModal.classList.add('close-modal')
+  overlay.classList.add('close-overlay')
 }
