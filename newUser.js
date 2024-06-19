@@ -142,6 +142,9 @@ regBtn.addEventListener("click", () => {
     accounts.push(account);
     createAcronym(accounts);
     console.log(accounts);
+
+    closeModal()
+    // closeOverlay()
   }
 });
 
@@ -207,4 +210,8 @@ function validatedNewUser () {
   emailDiv.classList.add("validated");
   ownerDiv.classList.add("validated");
   telDiv.classList.add("validated");
+}
+
+function closeModal () {
+  
 }
