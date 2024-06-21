@@ -213,7 +213,9 @@ function validatedNewUser () {
   telDiv.classList.add("validated");
 }
 
-function closeModal () {
+function closeModal (
+) {
+  // const mod = document.querySelector('.new-user-modal')
   newUserModal.classList.add('close-modal')
-  newUserModal.classList.add('delay-1')
+  overlay.classList.add('close-overlay')
 }
