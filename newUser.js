@@ -116,7 +116,7 @@ regBtn.addEventListener("click", () => {
     telInput.value === ""
   ) {
     validateNewUser();
-  } 
+  }
   else if (
     jobInput.value !== "" &&
     addressInput.value !== "" &&
@@ -127,8 +127,9 @@ regBtn.addEventListener("click", () => {
     telInput.value !== ""
   ) {
     validatedNewUser ()
+    closeModal()
   }
-  else 
+  else
   {
     const account = new Object();
     account.job = jobInput.value;
@@ -138,7 +139,7 @@ regBtn.addEventListener("click", () => {
     account.email = emailInput.value;
     account.owner = ownerInput.value;
     account.tel = telInput.value;
-    
+
     accounts.push(account);
     createAcronym(accounts);
     console.log(accounts);
@@ -156,7 +157,7 @@ function validateNewUser() {
     jobDiv.classList.remove("validated");
     jobDiv.classList.add("not-validated");
   }
-  
+
   if (addressInput.value !== "") {
     addressDiv.classList.remove("not-validated");
     addressDiv.classList.add("validated");
@@ -164,35 +165,35 @@ function validateNewUser() {
     addressDiv.classList.remove("validated");
     addressDiv.classList.add("not-validated");
   }
-  
+
   if (cityInput.value !== "") {
     cityDiv.classList.add("validated");
   } else {
     cityDiv.classList.remove("validated");
     cityDiv.classList.add("not-validated");
   }
-  
+
   if (codeInput.value !== "") {
     codeDiv.classList.add("validated");
   } else {
     codeDiv.classList.remove("validated");
     codeDiv.classList.add("not-validated");
   }
-  
+
   if (emailInput.value !== "") {
     emailDiv.classList.add("validated");
   } else {
     emailDiv.classList.remove("validated");
     emailDiv.classList.add("not-validated");
   }
-  
+
   if (ownerInput.value !== "") {
     ownerDiv.classList.add("validated");
   } else {
     ownerDiv.classList.remove("validated");
     ownerDiv.classList.add("not-validated");
   }
-  
+
   if (telInput.value !== "") {
     telDiv.classList.add("validated");
   } else {
@@ -213,5 +214,6 @@ function validatedNewUser () {
 }
 
 function closeModal () {
-  
+  newUserModal.classList.add('close-modal')
+  newUserModal.classList.add('delay-1')
 }

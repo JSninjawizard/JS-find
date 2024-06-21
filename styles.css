@@ -230,7 +230,7 @@ body {
 
 /*_ Details Container*/
 .body-container__details {
-    
+
 }
 
 /* @ custom classes */
@@ -379,10 +379,11 @@ body {
   height: 100vh;
   position: absolute;
   top: 0;
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 
 .hide-overlay {
   opacity: 0;
   z-index: -1;
+  transition: all .4s ease;
 }
