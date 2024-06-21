@@ -52,6 +52,7 @@ body {
     pointer-events: all;
     width: 15rem;
     height: 70%;
+    position: relative;
   }
 
 /*! Container Input */
@@ -230,6 +231,9 @@ body {
 
 /*_ Details Container*/
 .body-container__details {
+  border: 2px solid red;
+  position: absolute;
+  transform: translate(-20rem);
 
 }
 
@@ -343,7 +347,7 @@ body {
 
 .hide {
     /* display: none; */
-    opacity: 0;
+    opacity: 1;
     transition: all .6s ease;
     transition-behavior: allow-discrete;
 }
@@ -364,7 +368,7 @@ body {
   width: 30rem;;
   position: absolute;
   z-index: 5;
-  transition: all 0.1s ease;
+  transition: all 0.5s ease;
 }
 
 

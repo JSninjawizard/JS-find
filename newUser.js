@@ -60,8 +60,6 @@ codeInput.addEventListener("input", (e) => {
 
 codeInput.addEventListener("blur", (e) => {
   codeInput.classList.remove("remove-placeholder");
-  // eyes.classList.remove('show-eyes')
-  console.log(e.target);
 });
 
 eyes.addEventListener("click", () => {
@@ -127,26 +125,10 @@ regBtn.addEventListener("click", () => {
     telInput.value !== ""
   ) {
     validatedNewUser ()
+    createNewUser ()
     closeModal()
   }
-  else
-  {
-    const account = new Object();
-    account.job = jobInput.value;
-    account.address = addressInput.value;
-    account.city = cityInput.value;
-    account.code = Number(codeInput.value);
-    account.email = emailInput.value;
-    account.owner = ownerInput.value;
-    account.tel = telInput.value;
 
-    accounts.push(account);
-    createAcronym(accounts);
-    console.log(accounts);
-
-    closeModal()
-    // closeOverlay()
-  }
 });
 
 function validateNewUser() {
@@ -215,7 +197,23 @@ function validatedNewUser () {
 
 function closeModal (
 ) {
-  // const mod = document.querySelector('.new-user-modal')
   newUserModal.classList.add('close-modal')
   overlay.classList.add('close-overlay')
+  newUserModal.classList.add('delay-1')
+  overlay.classList.add('delay-1')
+}
+
+function createNewUser () {
+    const account = new Object();
+    account.job = jobInput.value;
+    account.address = addressInput.value;
+    account.city = cityInput.value;
+    account.code = Number(codeInput.value);
+    account.email = emailInput.value;
+    account.owner = ownerInput.value;
+    account.tel = telInput.value;
+
+    accounts.push(account);
+    createAcronym(accounts);
+    console.log(accounts);
 }
