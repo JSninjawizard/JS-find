@@ -169,7 +169,8 @@ const openedDoor = document.querySelector(".opened-door");
 const newUserIcon = document.querySelector(".new-user-icon");
 
 //@Message
-const welcomeMsg = document.querySelector(".output__msg");
+const welcomeMsg = document.querySelector(".welcome--message");
+// const welcomeMsg = document.querySelector(".output__msg");
 const owner = document.querySelector(".output__owner");
 //@Containers
 const loginContainer = document.querySelector(".container--login");
@@ -264,28 +265,43 @@ function validate() {
   } else if (currentUser?.code === Number(codeString)) {
     console.log(currentUser.owner);
 
-    closedDoor.classList.add("hide-door");
-    openedDoor.classList.remove("abs");
-    openedDoor.classList.add("show-door");
+    //!New -Start 
+    //@remove new user + login // input // door
+    loginContainer.classList.add('hide-door')
+    inputContainer.classList.add('hide-door')
+    closedDoor.classList.add('hide-door')
+    
+    //@add items
+    openedDoor.classList.add('s-d')
+    const test = document.querySelector('.container--details__welcome')
+    test.classList.add('s-d')
+    console.log(welcomeMsg);
+    console.log(openedDoor);
+    // openedDoor.classList.add('delay-1')
+    // !New -End 
 
-    welcomeMsg.textContent = `Welcome Back: `;
-    welcomeMsg.classList.add("welcome-show");
-    owner.textContent = currentUser.owner;
-    owner.classList.add("owner-show");
+    // closedDoor.classList.add("hide-door");
+    // openedDoor.classList.remove("abs");
+    // openedDoor.classList.add("show-door");
+
+    // welcomeMsg.textContent = `Welcome Back: `;
+    // welcomeMsg.classList.add("welcome-show");
+    // owner.textContent = currentUser.owner;
+    // owner.classList.add("owner-show");
 
     // !remove irrelevant items
-    loginContainer.classList.add('hide-login-container')
-    footerContainer.classList.add('hide-footer-container')
+    // loginContainer.classList.add('hide-login-container')
+    // footerContainer.classList.add('hide-footer-container')
     // inputContainer.classList.add('hide-footer-container')
-    outputContainer.classList.add('margin0')
+    // outputContainer.classList.add('margin0')
 
-    inputContainer.classList.add('hide')
-    bodyContainer.classList.add('hide')
-    detailsContainer.classList.remove('hide')
+    // inputContainer.classList.add('hide')
+    // bodyContainer.classList.add('hide')
+
 
     // !show more info
-    job.textContent = `Job: ${currentUser.Job}`
-    tel.textContent = `Tel: ${currentUser.tel}`
+    // job.textContent = `Job: ${currentUser.Job}`
+    // tel.textContent = `Tel: ${currentUser.tel}`
   }
 }
 

@@ -230,11 +230,13 @@ body {
 }
 
 /*_ Details Container*/
-.body-container__details {
-  border: 2px solid red;
-  position: absolute;
-  transform: translate(-20rem);
-
+.huy {
+    opacity: 1;
+    position: absolute;
+    font-size: 2rem;
+}
+.container--input {
+    border: 2px solid red;
 }
 
 /* @ custom classes */
