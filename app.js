@@ -267,16 +267,21 @@ function validate() {
 
     //!New -Start 
     //@remove new user + login // input // door
+    const userInput = document.querySelector('.container--input__username')
+    const codeInput = document.querySelector('.container--input__code')
+    
     loginContainer.classList.add('hide-door')
-    inputContainer.classList.add('hide-door')
+    // inputContainer.classList.add('hide-door')
     closedDoor.classList.add('hide-door')
     
     //@add items
-    openedDoor.classList.add('s-d')
-    const test = document.querySelector('.container--details__welcome')
-    test.classList.add('s-d')
-    console.log(welcomeMsg);
-    console.log(openedDoor);
+    userInput.classList.add('hide-door')
+    codeInput.classList.add('hide-door')
+
+    const test1 = document.querySelector('.container-output-opened-door')
+    console.log(test1);
+    test1.classList.add('opened-door1')
+
     // openedDoor.classList.add('delay-1')
     // !New -End 
 

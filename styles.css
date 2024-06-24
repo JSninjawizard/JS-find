@@ -56,6 +56,10 @@ body {
   }
 
 /*! Container Input */
+.container--input {
+    position: relative;
+}
+
 .container--input__username,
 .container--input__code {
   display: flex;
@@ -230,13 +234,21 @@ body {
 }
 
 /*_ Details Container*/
-.huy {
-    opacity: 1;
+.container-output-opened-door {
+    opacity: 0;
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    height: 100%;;
+    display: flex;
+    align-items: center;
+    transform: translateX(-10rem);
+    transition: all .5s ease;
 }
-.container--input {
-    border: 2px solid red;
+
+.opened-door1 {
+    transform: translate(0rem);
+    opacity: 1;
+
 }
 
 /* @ custom classes */
@@ -301,6 +313,7 @@ body {
   transform: translateX(-5rem);
   opacity: 0;
   transition: all 0.4s ease;
+
 }
 
 .show-door {
