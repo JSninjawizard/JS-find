@@ -205,7 +205,7 @@ function closeModal (
 
 function createNewUser () {
     const account = new Object();
-    account.job = jobInput.value;
+    account.Job = jobInput.value;
     account.address = addressInput.value;
     account.city = cityInput.value;
     account.code = Number(codeInput.value);

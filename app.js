@@ -278,21 +278,29 @@ function validate() {
     
     //@add items
     const containerOpenedDoor = document.querySelector('.container-output-opened-door')
-    console.log(containerOpenedDoor);
     containerOpenedDoor.classList.add('opened-door1')
 
     const welcomeMsg = document.querySelector('.container-output-welcome')
     welcomeMsg.classList.add('welcome-show1')
     welcomeMsg.classList.add('welcome-delay')
     
+  
+
     const job1 = document.querySelector('.job-test')
     const owner1 = document.querySelector('.owner-test')
-    job1.classList.add('show-details')
-    owner1.classList.add('show-details')
+    const email1 = document.querySelector('.email-test')
+    job1.classList.add('show-details-job')
     job1.classList.add('d1')
+    
+    owner1.classList.add('show-details-job')
+    owner1.classList.add('d12')
+    
+    email1.classList.add('show-details-job')
+    email1.classList.add('d15')
 
     job1.textContent = `Job: ${currentUser.Job}`
     owner1.textContent = `Owner: ${currentUser.owner}`
+    email1.textContent = `E-mail: ${currentUser.email}`
 
     // !New -End 
 
