@@ -289,18 +289,19 @@ function validate() {
     const job1 = document.querySelector('.job-test')
     const owner1 = document.querySelector('.owner-test')
     const email1 = document.querySelector('.email-test')
-    job1.classList.add('show-details-job')
-    job1.classList.add('d1')
     
     owner1.classList.add('show-details-job')
-    owner1.classList.add('d12')
+    owner1.classList.add('d1')
+    
+    job1.classList.add('show-details-job')
+    job1.classList.add('d12')
     
     email1.classList.add('show-details-job')
     email1.classList.add('d15')
 
-    job1.textContent = `Job: ${currentUser.Job}`
-    owner1.textContent = `Owner: ${currentUser.owner}`
-    email1.textContent = `E-mail: ${currentUser.email}`
+    owner1.textContent = `${currentUser.owner}`
+    job1.textContent = `${currentUser.Job}`
+    email1.textContent = `${currentUser.email}`
 
     // !New -End 
 

@@ -10,7 +10,7 @@ body {
   background-image: url("https://picsum.photos/1500/1000");
   /* background-image: url("https://fastly.picsum.photos/id/93/800/800.jpg?hmac=H6VASMmFssnKDZ4SVLCmG3wZZUTmpdOZ8sjWRjGyIeo"); */
   /* background-image: url("https://fastly.picsum.photos/id/448/1500/900.jpg?hmac=3ZFxsbbHO5qufNaZUHCUaT0j_-saEs8zBi3BfUbLNC4"); */
-  background-image: url("https://fastly.picsum.photos/id/1001/1500/900.jpg?hmac=jsRA3nig97Yv0agVvWcBO1hQhim74uuquK2HcqpUPtc");
+  /* background-image: url("https://fastly.picsum.photos/id/1001/1500/900.jpg?hmac=jsRA3nig97Yv0agVvWcBO1hQhim74uuquK2HcqpUPtc"); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -254,12 +254,13 @@ body {
 }
 
 .container-output-welcome {
+    width: 110%;
     position: absolute;
     display: flex;;
     height: 100%;;
     align-items: center;
     margin-left: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transform: translateX(-7rem); 
     opacity:0;
@@ -280,10 +281,12 @@ body {
 .output-test-details {
     display: flex;;
     align-items: center;
-    /* border: 2px solid red;; */
-    margin-top: 2rem;
+    border: 2px solid red;;
+    margin-top: 5rem;
     gap: 1rem;
-
+    font-size: 1.4rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .job-test {
@@ -302,7 +305,7 @@ body {
 .details-info{
     display: flex;;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
