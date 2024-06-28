@@ -169,7 +169,6 @@ const openedDoor = document.querySelector(".opened-door");
 const newUserIcon = document.querySelector(".new-user-icon");
 
 //@Message
-const welcomeMsg = document.querySelector(".welcome--message");
 // const welcomeMsg = document.querySelector(".output__msg");
 const owner = document.querySelector(".output__owner");
 //@Containers
@@ -274,15 +273,27 @@ function validate() {
     // inputContainer.classList.add('hide-door')
     closedDoor.classList.add('hide-door')
     
-    //@add items
     userInput.classList.add('hide-door')
     codeInput.classList.add('hide-door')
+    
+    //@add items
+    const containerOpenedDoor = document.querySelector('.container-output-opened-door')
+    console.log(containerOpenedDoor);
+    containerOpenedDoor.classList.add('opened-door1')
 
-    const test1 = document.querySelector('.container-output-opened-door')
-    console.log(test1);
-    test1.classList.add('opened-door1')
+    const welcomeMsg = document.querySelector('.container-output-welcome')
+    welcomeMsg.classList.add('welcome-show1')
+    welcomeMsg.classList.add('welcome-delay')
+    
+    const job1 = document.querySelector('.job-test')
+    const owner1 = document.querySelector('.owner-test')
+    job1.classList.add('show-details')
+    owner1.classList.add('show-details')
+    job1.classList.add('d1')
 
-    // openedDoor.classList.add('delay-1')
+    job1.textContent = `Job: ${currentUser.Job}`
+    owner1.textContent = `Owner: ${currentUser.owner}`
+
     // !New -End 
 
     // closedDoor.classList.add("hide-door");

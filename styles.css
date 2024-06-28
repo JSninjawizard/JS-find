@@ -235,20 +235,76 @@ body {
 
 /*_ Details Container*/
 .container-output-opened-door {
-    opacity: 0;
     position: absolute;
     font-size: 2.2rem;
     height: 100%;;
     display: flex;
     align-items: center;
+    opacity: 0;
     transform: translateX(-10rem);
     transition: all .5s ease;
+    z-index: -1
 }
 
 .opened-door1 {
     transform: translate(0rem);
     opacity: 1;
+    z-index: 1;
+    
+}
 
+.container-output-welcome {
+    position: absolute;
+    display: flex;;
+    height: 100%;;
+    align-items: center;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transform: translateX(-7rem); 
+    opacity:0;
+    z-index: -1;
+}
+
+.welcome-show1 {
+    transform: translate(0rem);
+    opacity: 1;
+    transition: all 1s ease-in;
+    z-index: 1;
+}
+
+.welcome-delay {
+    transition-delay: .5s;
+}
+
+.output-test-details {
+    display: flex;;
+    align-items: center;
+}
+
+.job-test {
+    transform: translateY(4rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+}
+
+.owner-test {
+    transform: translateY(4rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s ease;
+}
+
+.show-details {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0rem);
+    transition: all 0.6s ease;
+}
+
+.d1 {
+    transition-delay: .7s;
 }
 
 /* @ custom classes */
