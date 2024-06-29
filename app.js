@@ -180,9 +180,6 @@ const outputContainer = document.querySelector(".container--output");
 const detailsContainer = document.querySelector(".body-container__details");
 
 //@More Info
-const moreDetails = document.querySelector(".output__more-details");
-const job = document.querySelector(".output__more-details--job");
-const tel = document.querySelector(".output__more-details--tel");
 
 //@New user modal
 const newUserModal = document.querySelector(".new-user-modal");
@@ -252,10 +249,10 @@ function validate() {
   const codeString = code.value;
   console.log(userString);
   console.log(codeString);
-
+  
   const currentUser = accounts.find((x) => x.acronym === userString);
   console.log(currentUser);
-
+  
   if (currentUser === undefined) {
     closedDoor.classList.add("animate");
   } else if (currentUser?.code !== Number(codeString)) {
@@ -263,7 +260,7 @@ function validate() {
     closedDoor.classList.add("animate");
   } else if (currentUser?.code === Number(codeString)) {
     console.log(currentUser.owner);
-
+    
     //!New -Start 
     //@remove new user + login // input // door
     const userInput = document.querySelector('.container--input__username')
@@ -277,9 +274,10 @@ function validate() {
     codeInput.classList.add('hide-door')
     
     //@add items
+    const output = document.querySelector(".output-details");
     const containerOpenedDoor = document.querySelector('.container-output-opened-door')
-    containerOpenedDoor.classList.add('opened-door1')
-
+    containerOpenedDoor.classList.add('opened-door')
+    output.style.zIndex = "1";
     const welcomeMsg = document.querySelector('.container-output-welcome')
     welcomeMsg.classList.add('welcome-show1')
     welcomeMsg.classList.add('welcome-delay')

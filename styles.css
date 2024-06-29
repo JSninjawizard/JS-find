@@ -119,7 +119,7 @@ body {
   cursor: pointer;
 }
 
-.opened-door {
+.hide-opened-door {
   position: absolute;
   transform: translateX(-5rem);
   opacity: 0;
@@ -127,28 +127,7 @@ body {
 }
 
 /*! Container Output Message */
-.container--output__msg {
-  display: flex;
-  gap: 0.2rem;
-  align-items: start;
-  flex-direction: column;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 
-}
-
-.output__msg {
-  transform: translateY(3rem);
-  transition: all 0.3s ease-in;
-  opacity: 0;
-}
-
-.output__owner {
-  transform: translateX(4rem);
-  transition: all 0.6s ease-in;
-  opacity: 0;
-
-}
 
 /*+ Login Container*/
 .container--login {
@@ -246,7 +225,7 @@ body {
     z-index: -1
 }
 
-.opened-door1 {
+.opened-door{
     transform: translate(0rem);
     opacity: 1;
     z-index: 1;
@@ -278,7 +257,7 @@ body {
     transition-delay: .4s;
 }
 
-.output-test-details {
+.output-details {
     display: flex;;
     align-items: center;
     margin-top: 5rem;
@@ -288,6 +267,7 @@ body {
     text-align: center;
     position: absolute;;
     width: 100%;
+    z-index: -1;
 }
 
 .job-test {
