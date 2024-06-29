@@ -281,12 +281,13 @@ body {
 .output-test-details {
     display: flex;;
     align-items: center;
-    border: 2px solid red;;
     margin-top: 5rem;
     gap: 1rem;
     font-size: 1.4rem;
     justify-content: center;
     text-align: center;
+    position: absolute;;
+    width: 100%;
 }
 
 .job-test {
