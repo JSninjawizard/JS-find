@@ -15,6 +15,23 @@ body {
   background-repeat: no-repeat;
 }
 
+/*! Overlay */
+.overlay {
+  background-color: #071e3579;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease;
+}
+
+.hide-overlay {
+  opacity: 0;
+  z-index: -1;
+  transition: all .4s ease;
+}
+
+/*! Container */
 .container {
   border: 1px solid black;
   display: flex;
@@ -29,6 +46,24 @@ body {
   /* width: 31rem; */
   backdrop-filter: blur(10px) grayscale(30%)
   /* invert(70%); */
+}
+
+/*! New user */
+.new-user-modal {
+  background-color: aqua;
+  background-color: #F9F6EE;
+  background-color: bisque;
+  border: 1px solid rgb(5, 22, 31);
+  height: 30rem;
+  width: 30rem;;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+
+.hide-modal {
+  z-index: -1;
+  opacity:0;
 }
 
 /*! Logo */
@@ -436,36 +471,5 @@ body {
     transition: all .6s ease;
 }
 
-/* modal */
-.new-user-modal {
-  background-color: aqua;
-  background-color: #F9F6EE;
-  background-color: bisque;
-  border: 1px solid rgb(5, 22, 31);
-  height: 30rem;
-  width: 30rem;;
-  position: absolute;
-  z-index: 5;
-  transition: all 0.5s ease;
-}
 
 
-.hide-modal {
-  z-index: -1;
-  opacity:0;
-}
-
-.overlay {
-  background-color: #071e3579;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  transition: all 1s ease;
-}
-
-.hide-overlay {
-  opacity: 0;
-  z-index: -1;
-  transition: all .4s ease;
-}
