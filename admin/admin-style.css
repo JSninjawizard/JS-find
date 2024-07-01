@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.box:hover {
+    border: 3px solid orange;
+    background-color: rgba(0, 128, 0, 0.245);
+    cursor: pointer;
+}
+
+.box:hover::after {
+    content: 'x';
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    position: absolute;
+    top: -10px;
+    padding: 3px;
+    right: -8px;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    flex-basis: 1rem;
+    justify-content: center;
+    border: 1px solid;
+    padding: 1rem;
+}
