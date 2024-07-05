@@ -82,13 +82,19 @@ body {
 
 /*! Body of Container */
 .body-container {
-    transition: all 0.5s ease;
-    opacity: 1;
-    pointer-events: all;
-    width: 15rem;
-    height: 70%;
-    position: relative;
-  }
+  transition: all 0.5s ease;
+  opacity: 1;
+  pointer-events: all;
+  width: 15rem;
+  height: 70%;
+  position: relative;
+  border: 2px solid orangered;
+}
+
+.body-container > * {
+  border: 2px solid orange;
+}
+
 
 /*! Container Input */
 .container--input {
@@ -244,7 +250,7 @@ body {
     gap: 0.4rem;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
 /*_ Details Container*/
