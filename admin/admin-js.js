@@ -137,15 +137,22 @@ const accounts = [
   ];
 
 const btn = document.querySelector(".btn")
-const p = document.querySelector("p")
+const div = document.querySelector(".div")
+
 
 btn.addEventListener('click', () => {
     accounts.forEach((a,b,c,d) => {
+      // console.log(a.owner);
         const newDiv = document.createElement("div");
-        console.log(a.owner);
         newDiv.textContent = a.owner
         newDiv.classList.add("box")
-        p.appendChild(newDiv)
+        div.appendChild(newDiv)
+
+        newDiv.addEventListener('click', ()=>{
+          console.log('x was clicked');
+        })
+
+
     })
 
 })
