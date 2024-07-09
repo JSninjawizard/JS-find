@@ -142,20 +142,20 @@ const div = document.querySelector(".div")
 
 btn.addEventListener('click', () => {
     accounts.forEach((item,index,arrr,d) => {
-      console.log(item);
+      // console.log(item);
       // console.log(a.owner);
         const newDiv = document.createElement("div");
         const close = document.createElement("div");
+        const p = document.createElement("p");
+
         const emailOwner = item.owner
         const jobDisplay = item.Job
-        newDiv.textContent = JSON.stringify(`${jobDisplay} ${emailOwner}`)
-        // console.log(JSON.stringify(a));
-        const huy = JSON.stringify(item)
-        const kurwa = huy.split('}')
-        for (const el of kurwa) {
-          // console.log(el);
-        }
+        // newDiv.textContent = JSON.stringify(`${jobDisplay} ${emailOwner}`)
+        newDiv.innerHTML =  `<b>${emailOwner}</b> <br> ${jobDisplay}`
 
+        // p.textContent =  jobDisplay
+      // newDiv.appendChild(p)
+      // console.log(p);
 
         // newDiv.textContent = Object.values(a)
 
