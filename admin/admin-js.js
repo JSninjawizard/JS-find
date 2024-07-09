@@ -141,15 +141,36 @@ const div = document.querySelector(".div")
 
 
 btn.addEventListener('click', () => {
-    accounts.forEach((a,b,c,d) => {
+    accounts.forEach((item,index,arrr,d) => {
+      console.log(item);
       // console.log(a.owner);
         const newDiv = document.createElement("div");
-        newDiv.textContent = a.owner
+        const close = document.createElement("div");
+        const emailOwner = item.owner
+        const jobDisplay = item.Job
+        newDiv.textContent = JSON.stringify(`${jobDisplay} ${emailOwner}`)
+        // console.log(JSON.stringify(a));
+        const huy = JSON.stringify(item)
+        const kurwa = huy.split('}')
+        for (const el of kurwa) {
+          // console.log(el);
+        }
+
+
+        // newDiv.textContent = Object.values(a)
+
+
+
         newDiv.classList.add("box")
+        newDiv.appendChild(close)
+        close.textContent = '×'
+        close.classList.add('close')
         div.appendChild(newDiv)
 
-        newDiv.addEventListener('click', ()=>{
-          console.log('x was clicked');
+        close.addEventListener('click', ()=>{
+          console.log(accounts[b]);
+          delete accounts[b]
+          newDiv.style.display = 'none'
         })
 
 
