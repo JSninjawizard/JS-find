@@ -151,7 +151,7 @@ btn.addEventListener('click', () => {
         const emailOwner = item.owner
         const jobDisplay = item.Job
         // newDiv.textContent = JSON.stringify(`${jobDisplay} ${emailOwner}`)
-        newDiv.innerHTML =  `<b>${emailOwner}</b> <br> ${jobDisplay}`
+        newDiv.innerHTML =  `<b>${emailOwner}</b>  ${jobDisplay}`
 
         // p.textContent =  jobDisplay
       // newDiv.appendChild(p)
