@@ -19,27 +19,22 @@ const accounts = [
     },
 ]
 
-const box1 = document.querySelector(".box-1")
-
+const mainDiv = document.createElement('div')
+const arr = []
 for (const account of accounts) {
-    let job = account.Job
-    let owner = account.owner
-    // console.log(huy);
+  // const owner = account.owner
+  // const job = account.Job
+  // arr.push(owner,job)
 
-    const div = document.createElement("div");
-    div.append(job)
-    div.append(owner)
-    box1.appendChild(div)
-    
-    
-    
-    
-    for (const pro in account) {
-        // const owner = `${pro}: ${account[pro]}`
-        // console.log(pro.split(''));
+  const all = Object.entries(accounts)
+  const keys = Object.keys(accounts)
+  const values = Object.values(account)
+  console.log(values);
 
-        // const div = document.createElement("div");
-        // div.append(owner)
-        // box1.appendChild(div)
-    }
+  const result = values.filter((vals, i) => i[0]))
+  console.log(result);
 }
+
+
+
+// const result = words.filter((word) => word.length > 6)
