@@ -20,19 +20,40 @@ const accounts = [
 ]
 
 const mainDiv = document.createElement('div')
+mainDiv.classList.add('test')
+mainDiv.textContent='ewe'
+console.log(mainDiv);
+document.body.appendChild(mainDiv)
+
+
 const arr = []
 for (const account of accounts) {
-  // const owner = account.owner
-  // const job = account.Job
-  // arr.push(owner,job)
+  const diva = document.createElement('div')
+  diva.classList.add('herna')
 
   const all = Object.entries(accounts)
   const keys = Object.keys(accounts)
   const values = Object.values(account)
-  console.log(values);
+  // console.log(values);
 
-  const result = values.filter((vals, i) => i[0]))
-  console.log(result);
+
+  const test = values.slice(0,1)
+  const test1 = values.slice(3,4)
+  const test3 = test.concat(test1)
+  console.log(test3);
+
+  test3.forEach(el => {
+    const par = document.createElement('p')
+    par.textContent = el
+    diva.appendChild(par)
+    mainDiv.appendChild(diva)
+  })
+
+    values.forEach((value,index,c,d) => {
+      // console.log(`${value} - ${index+1}`);
+      // console.log(value.slice);
+
+    })
 }
 
 

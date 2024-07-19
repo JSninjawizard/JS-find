@@ -168,8 +168,8 @@ btn.addEventListener('click', () => {
         div.appendChild(newDiv)
 
         close.addEventListener('click', ()=>{
-          console.log(accounts[b]);
-          delete accounts[b]
+          console.log(accounts[index]);
+          delete accounts[index]
           newDiv.style.display = 'none'
         })
 

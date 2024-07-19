@@ -19,7 +19,7 @@
     background-color: red;
     display: flex;
     align-items: center;
-    
+
 }
 
 .box:hover{
@@ -62,4 +62,13 @@
     justify-content: center;
     /* align-items: center; */
     /* text-align: center;  */
+}
+
+/* #New */
+.container {
+    border: 1px solid;
+}
+
+.div-box {
+    border: 1px solid red;
 }
