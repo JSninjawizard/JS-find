@@ -67,8 +67,40 @@
 /* #New */
 .container {
     border: 1px solid;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    /* height: 100vh; */
+    
 }
 
 .div-box {
     border: 1px solid red;
+    cursor: pointer;
+    margin:2px;
+    /* flex: 1; */
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    position: relative;
+}
+
+
+.div-box:hover {
+    background-color: rgba(170, 58, 58, 0.401);
+    /* cursor: pointer; */
+}
+
+.close-btn {
+    border: 3px solid green;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
