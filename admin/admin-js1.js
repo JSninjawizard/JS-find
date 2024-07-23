@@ -181,5 +181,39 @@ for (const account of accounts) {
     div.appendChild(par)
     div.appendChild(closeBtn)
     container.appendChild(div)
+  // })
+
+  closeBtn.addEventListener('click', () => {
+    console.log('clicked');
+    closeBtn.classList.add('close-active')
+    const confirm =  document.createElement('div')
+    const yes = document.createElement('p')
+    const no = document.createElement('p')
+
+    closeBtn.style.display = 'none'
+    yes.textContent='yes'
+    yes.classList.add('yes')
+    no.textContent='no'
+    no.classList.add('no')
+
+    confirm.classList.add('confirm')
+    confirm.appendChild(yes)
+    confirm.appendChild(no)
+    div.appendChild(confirm)
+    par.style.opacity = '0.4'
+    
+    yes.addEventListener('click', ()=> {
+      div.style.display='none'
+    })
+    
+    no.addEventListener('click', ()=> {
+      par.style.opacity = '1'
+      confirm.style.display = 'none'
+      // confirm.classList.remove('confirm')
+      
+    })
+
+  })
+
   })
 }

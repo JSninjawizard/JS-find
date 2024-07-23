@@ -89,9 +89,10 @@
 }
 
 
-.div-box:hover {
+.div-box:hover .close-btn {
     background-color: rgba(170, 58, 58, 0.401);
     /* cursor: pointer; */
+    opacity: 1;
 }
 
 .close-btn {
@@ -103,4 +104,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+}
+
+.close-active:active {
+    transform: scale(0.9);
+}
+
+.confirm {
+    border: 1px solid;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: .4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.yes,
+.no {
+    font-size: 2rem;
+    border: 1px solid;
+    padding: 1rem;
+}
+
+.yes:hover {
+    /* border: 2px solid; */
+    padding: 1rem;
+    background-color: rgba(12, 180, 12, 0.342);
+}
+
+.no:hover {
+    /* border: 2px solid; */
+    background-color: rgba(180, 37, 12, 0.342);
+    padding: 1rem;
+    padding: 1rem;
 }
