@@ -141,3 +141,87 @@
     padding: 1rem;
     padding: 1rem;
 }
+
+
+
+
+/* !back to basics => (admin-js.js)*/
+.tbox {
+    border: 1px solid;
+    height: 10rem;
+    width: 20rem;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.tbox-close {
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 11;
+}
+
+.tbox:hover::before {
+    background-color: rgba(203, 80, 14, 0.816);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.tbox:hover .tbox-close {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;    
+}
+
+.tbox:hover .tbox-close:active {
+    transform: scale(0.90);
+}
+
+
+/* @prompt */
+.tbox:hover .tbox-close-off {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;    
+}
+.tbox-close-remove {
+    transform: translate(10rem);
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.tbox-prompt-off {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    transform: translate(-18rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.tbox-prompt-on {
+    transform: translate(0rem);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tbox-yes:hover {
+    background-color: red;
+    padding: 1rem;
+}
+
+.tbox-no:hover {
+    background-color: green;
+    padding: 1rem;
+}

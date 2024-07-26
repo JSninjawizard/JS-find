@@ -177,3 +177,19 @@ btn.addEventListener('click', () => {
     })
 
 })
+
+
+
+const tbox = document.querySelector('.tbox')
+const tboxClose = document.querySelector('.tbox-close')
+const tboxPrompt = document.querySelector('.tbox-prompt')
+
+const yes = document.createElement('div')
+const no = document.createElement('div')
+
+tboxClose.addEventListener('click', () => {
+  tboxClose.classList.remove('tbox:hover tbox-close-off')
+  tboxClose.classList.add('tbox-close-remove')
+  tboxPrompt.classList.remove('tbox-prompt-off')
+  tboxPrompt.classList.add('tbox-prompt-on')
+})
