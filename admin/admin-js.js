@@ -180,16 +180,27 @@ btn.addEventListener('click', () => {
 
 
 
-const tbox = document.querySelector('.tbox')
-const tboxClose = document.querySelector('.tbox-close')
-const tboxPrompt = document.querySelector('.tbox-prompt')
 
-const yes = document.createElement('div')
-const no = document.createElement('div')
+const infoBox = document.querySelector('.tbox1')
+const closeBtn = document.querySelector('.close1')
+const closeBtnContainer = document.querySelector('.tbox-close1')
+const promptContainer = document.querySelector('.tbox-prompt1')
+const promptYes = document.querySelector('.tbox-yes1')
+const promptNo = document.querySelector('.tbox-no1')
 
-tboxClose.addEventListener('click', () => {
-  tboxClose.classList.remove('tbox:hover tbox-close-off')
-  tboxClose.classList.add('tbox-close-remove')
-  tboxPrompt.classList.remove('tbox-prompt-off')
-  tboxPrompt.classList.add('tbox-prompt-on')
+closeBtn.addEventListener('click', () => {
+  closeBtn.classList.add('move-aside1')
+  closeBtnContainer.classList.add('move-aside')
+  promptContainer.classList.add('tbox-prompt1-show')
+
+})
+
+promptYes.addEventListener('click', () => {
+  infoBox.style.display = 'none'
+})
+
+promptNo.addEventListener('click', () => {
+  closeBtn.classList.remove('move-aside1')
+  closeBtnContainer.classList.remove('move-aside')
+  promptContainer.classList.remove('tbox-prompt1-show')
 })

@@ -7,221 +7,123 @@
     box-sizing: border-box;
 }
 
-.box  {
-    border: 1px solid black;
-    padding: 10px 5px;
-    position: relative;
-    margin: .5rem;
-    border: 1px solid;
-    cursor: pointer;
-    text-wrap: wrap;
-    height: 10rem;
-    background-color: red;
-    display: flex;
-    align-items: center;
-
-}
-
-.box:hover{
-    /* border: 3px solid orange; */
-    background-color: rgba(0, 128, 0, 0.245);
-    transition: all .3s ease;
-}
-
-.close {
-    position: absolute;
-    top: -10px;
-    right: -6px;
-    border: 1px solid;
-    height: 1.2rem;
-    width: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgba(255, 0, 0, 0.441);
-    opacity: 0;
-}
-
-.box:hover .close {
-    opacity: 1;
-    transition: all .3s ease-in;
-    /* pointer-events: all; */
-}
-
-.close:active {
-    transform: scale(0.9);
-    transition: all .0s;
-}
-
-.div {
-    /* pointer-events: none; */
-    border: 1px solid;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: center; */
-    /* text-align: center;  */
-}
-
-/* #New */
-.container {
-    border: 1px solid;
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    /* height: 100vh; */
-    
-}
-
-.div-box {
-    border: 1px solid red;
-    cursor: pointer;
-    margin:2px;
-    /* flex: 1; */
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* text-align: center; */
-    position: relative;
-}
 
 
-.div-box:hover .close-btn {
-    background-color: rgba(170, 58, 58, 0.401);
-    /* cursor: pointer; */
-    opacity: 1;
-}
-
-.close-btn {
-    border: 3px solid green;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    font-size: 7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-}
-
-.close-active:active {
-    transform: scale(0.9);
-}
-
-.confirm {
-    border: 1px solid;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    gap: .4rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.yes,
-.no {
-    font-size: 2rem;
-    border: 1px solid;
-    padding: 1rem;
-}
-
-.yes:hover {
-    /* border: 2px solid; */
-    padding: 1rem;
-    background-color: rgba(12, 180, 12, 0.342);
-}
-
-.no:hover {
-    /* border: 2px solid; */
-    background-color: rgba(180, 37, 12, 0.342);
-    padding: 1rem;
-    padding: 1rem;
-}
-
-
-
-
-/* !back to basics => (admin-js.js)*/
-.tbox {
+/* !New */
+.tbox1 {
     border: 1px solid;
     height: 10rem;
     width: 20rem;;
+    position: relative;
+    
+}
+
+.text {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    height: 100%;
+    justify-content: center;
     gap: 1rem;
     position: relative;
 }
 
-.tbox-close {
+
+.tbox-close1 {
+    border: 3px solid red;
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+
+.close1 {
     font-size: 8rem;
+    height: 100%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.tbox-close1:hover {
+    background-color: rgba(255, 0, 0, 0.174);
+    
+}
+
+.tbox-close1:hover .close1{
+    pointer-events: all;
+    opacity: 1;
+}
+
+.tbox-close1:hover .close1:active {
+    transform: scale(0.9);
+}
+
+.move-aside1 {
+    transform: translateX(5rem);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.5s ease;
-    z-index: 11;
 }
 
-.tbox:hover::before {
-    background-color: rgba(203, 80, 14, 0.816);
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.tbox:hover .tbox-close {
-    opacity: 1;
-    pointer-events: all;
-    cursor: pointer;    
-}
-
-.tbox:hover .tbox-close:active {
-    transform: scale(0.90);
-}
-
-
-/* @prompt */
-.tbox:hover .tbox-close-off {
-    opacity: 1;
-    pointer-events: all;
-    cursor: pointer;    
-}
-.tbox-close-remove {
-    transform: translate(10rem);
-    opacity:0;
+.move-aside {
+    transform: translateX(20rem);
+    opacity: 0;
     pointer-events: none;
-    transition: all 0.5s ease;
 }
 
-.tbox-prompt-off {
+.tbox-prompt1 {
+    border: 1px solid;
     position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     gap: 1rem;
-    transform: translate(-18rem);
+    font-size: 4.5rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 228, 196, 0.882);
+    transform: translateX(-20rem);
     opacity: 0;
     pointer-events: none;
-    transition: all .5s ease;
+    transition: all .6s ease;
 }
 
-.tbox-prompt-on {
-    transform: translate(0rem);
+.tbox-prompt1-show {
+    transform: translateX(0rem);
     opacity: 1;
     pointer-events: all;
+
 }
 
-.tbox-yes:hover {
+.tbox-yes1,
+.tbox-no1 {
+    padding: 0.5rem 1rem;
+}
+
+.tbox-yes1:active,
+.tbox-no1:active {
+    transform: scale(0.9);
+    transition: all .3s ease;
+}
+
+.tbox-yes1:hover {
     background-color: red;
-    padding: 1rem;
+    cursor: pointer;
 }
 
-.tbox-no:hover {
-    background-color: green;
-    padding: 1rem;
+.tbox-no1:hover {
+    background-color: rgb(12, 180, 12);
+    cursor: pointer;
 }
+
