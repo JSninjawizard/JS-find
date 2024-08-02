@@ -1,23 +1,23 @@
-// const accounts = [
-//     {
-//       owner: "Wilber Durgan",
-//       email: "Berniece.Schmitt10@yahoo.com",
-//       username: "Andres2",
-//       Job: "Senior Metrics Consultant",
-//       tel: "1-062-815-0158 x6026",
-//       city: "Waelchiside",
-//       address: "South Johnschester, McKenzie Views, 35967",
-//     },
-//     {
-//       owner: "Erika Bergstrom",
-//       email: "Ari_Medhurst@hotmail.com",
-//       username: "Laney.Cummerata24",
-//       Job: "Senior Marketing Orchestrator",
-//       tel: "(312) 597-9928 x4137",
-//       city: "Domenicton",
-//       address: "Port South Max, O'Conner Via, 30895",
-//     }
-// ]
+const accounts = [
+    {
+      owner: "Wilber Durgan",
+      email: "Berniece.Schmitt10@yahoo.com",
+      username: "Andres2",
+      Job: "Senior Metrics Consultant",
+      tel: "1-062-815-0158 x6026",
+      city: "Waelchiside",
+      address: "South Johnschester, McKenzie Views, 35967",
+    },
+    {
+      owner: "Erika Bergstrom",
+      email: "Ari_Medhurst@hotmail.com",
+      username: "Laney.Cummerata24",
+      Job: "Senior Marketing Orchestrator",
+      tel: "(312) 597-9928 x4137",
+      city: "Domenicton",
+      address: "Port South Max, O'Conner Via, 30895",
+    }
+]
 
 // const accounts = [
 //   {
@@ -158,62 +158,61 @@
 // ];
 
 
-// const container = document.createElement('div')
-// container.classList.add('container')
-// document.body.appendChild(container)
+const container = document.createElement('div')
+container.classList.add('container')
+document.body.appendChild(container)
 
-// for (const account of accounts) {
-//   const div = document.createElement('div')
-//   div.classList.add('div-box')
-//   const closeBtn = document.createElement('div')
-//   closeBtn.classList.add('close-btn')
-  
-//   const values = Object.values(account)
-//   const owner = values.slice(0,1)
-//   const job = values.slice(3,4)
-//   const fullProfile = owner.concat(job)
-//   console.log(fullProfile);
-  
-//   fullProfile.forEach(el => {
-//     const par = document.createElement('p')
-//     par.textContent=el
-//     closeBtn.textContent = '×'
-//     div.appendChild(par)
-//     div.appendChild(closeBtn)
-//     container.appendChild(div)
-//   // })
+for (const account of accounts) {
+  const div = document.createElement('div')
+  div.classList.add('div-box')
+  const closeBtn = document.createElement('div')
+  closeBtn.classList.add('close-btn')
 
-//   closeBtn.addEventListener('click', () => {
-//     console.log('clicked');
-//     closeBtn.classList.add('close-active')
-//     const confirm =  document.createElement('div')
-//     const yes = document.createElement('p')
-//     const no = document.createElement('p')
+  const values = Object.values(account)
+  const owner = values.slice(0,1)
+  const job = values.slice(3,4)
+  const fullProfile = owner.concat(job)
+  console.log(fullProfile);
 
-//     closeBtn.style.display = 'none'
-//     yes.textContent='yes'
-//     yes.classList.add('yes')
-//     no.textContent='no'
-//     no.classList.add('no')
+  fullProfile.forEach(el => {
+    const par = document.createElement('p')
+    par.textContent=el
+    closeBtn.textContent = '×'
+    div.appendChild(par)
+    div.appendChild(closeBtn)
+    container.appendChild(div)
+  })
 
-//     confirm.classList.add('confirm')
-//     confirm.appendChild(yes)
-//     confirm.appendChild(no)
-//     div.appendChild(confirm)
-//     par.style.opacity = '0.4'
-    
-//     yes.addEventListener('click', ()=> {
-//       div.style.display='none'
-//     })
-    
-//     no.addEventListener('click', ()=> {
-//       par.style.opacity = '1'
-//       confirm.style.display = 'none'
-//       // confirm.classList.remove('confirm')
-      
-//     })
+  closeBtn.addEventListener('click', () => {
+    console.log('clicked');
+    closeBtn.classList.add('close-active')
+    const confirm =  document.createElement('div')
+    const yes = document.createElement('p')
+    const no = document.createElement('p')
 
-//   })
+    closeBtn.style.display = 'none'
+    yes.textContent='yes'
+    yes.classList.add('yes')
+    no.textContent='no'
+    no.classList.add('no')
 
-//   })
-// }
+    confirm.classList.add('confirm')
+    confirm.appendChild(yes)
+    confirm.appendChild(no)
+    div.appendChild(confirm)
+    par.style.opacity = '0.4'
+
+    yes.addEventListener('click', ()=> {
+      div.style.display='none'
+    })
+
+    no.addEventListener('click', ()=> {
+      par.style.opacity = '1'
+      confirm.style.display = 'none'
+      // confirm.classList.remove('confirm')
+
+    })
+
+  })
+
+  }
