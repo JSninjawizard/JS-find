@@ -175,18 +175,6 @@
     transition: all .6s ease;
 }
 
-.move-aside-delCardDiv {
-    transform: translateX(5rem);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.move-aside-trashcan {
-    transform: translateX(20rem);
-    opacity: 0;
-    pointer-events: none;
-}
-
 .deleteCardDiv:hover {
     background-color: rgba(255, 0, 0, 0.174);
 
@@ -200,6 +188,19 @@
 .deleteCardDiv:hover .deleteCard:active {
     transform: scale(0.9);
 }
+
+.move-aside-delCardDiv {
+    transform: translateX(5rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.move-aside-trashcan {
+    transform: translateX(20rem);
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 
 /*!@#$% Prompt */

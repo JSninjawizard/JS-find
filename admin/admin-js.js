@@ -253,46 +253,61 @@ for (const account of accounts) {
 }
 
 
+const cards = document.querySelectorAll('.card')
+const trashcans = document.querySelectorAll('.deleteCard')
+const deleteCardDivs = document.querySelectorAll('.deleteCardDiv')
+const promptDivs = document.querySelectorAll('.promptDiv')
+const promptYesBtns = document.querySelector('.promptYes')
+const promptNoBtns = document.querySelector('.promptNo')
+
+
+trashcans.forEach((el,index) => {
+  el.addEventListener("click", () => {
+    trashcans[index].classList.add('move-aside-trashcan')
+    deleteCardDivs[index].classList.add('move-aside-delCardDiv')
+    promptDivs[index].classList.add('promptDiv-show')
+    
+    promptDivs[index].addEventListener('click', (e) => {
+      const response = e.target.textContent
+      if (response === 'Yes') {
+        console.log('yes was clicked');
+        cards[index].style.display = 'none'
+      } else {
+        console.log('no was clicked');
+        promptDivs[index].classList.remove('promptDiv-show')
+        deleteCardDivs[index].classList.remove('move-aside-delCardDiv')
+        trashcans[index].classList.remove('move-aside-trashcan')
+      }
+    })
+  })
+})
+
 const card = document.querySelector('.card')
 const deleteCardDiv = document.querySelector('.deleteCardDiv')
-const trashcan = document.querySelector('.trashcan')
+const trashcan = document.querySelector('.deleteCard')
 const promptDiv = document.querySelector('.promptDiv')
 const promptYesBtn = document.querySelector('.promptYes')
 const promptNoBtn = document.querySelector('.promptNo')
 
-trashcan.addEventListener('click', () => {
-  trashcan.classList.add('move-aside-trashcan')
-  deleteCardDiv.classList.add('move-aside-delCardDiv')
-  promptDiv.classList.add('promptDiv-show')
+// trashcan.addEventListener('click', () => {
+  //     console.log('clicked');
+//     trashcan.classList.add('move-aside-trashcan')
+//     deleteCardDiv.classList.add('move-aside-delCardDiv')
+//     promptDiv.classList.add('promptDiv-show')
+//   })
+  
+// promptYesBtn.addEventListener('click', () => {
+//   card.style.display = 'none'
+// })
 
-})
+// promptNoBtn.addEventListener('click', () => {
 
-promptYes.addEventListener('click', () => {
-  infoBox.style.display = 'none'
-})
+//   promptDiv.classList.remove('promptDiv-show')
 
-promptNo.addEventListener('click', () => {
-  closeBtn.classList.remove('move-aside1')
-  closeBtnContainer.classList.remove('move-aside')
-  promptContainer.classList.remove('tbox-prompt1-show')
-})
+//   deleteCardDiv.classList.remove('move-aside-delCardDiv')
+//   trashcan.classList.remove('move-aside-trashcan')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// })
 
 const infoBox = document.querySelector('.tbox1')
 const closeBtn = document.querySelector('.close1')
