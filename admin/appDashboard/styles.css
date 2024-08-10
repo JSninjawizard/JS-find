@@ -120,28 +120,21 @@ main.content {
     background-color: aqua;
 }
 
-#user-management {
-    display: grid;
-    /* grid-template-columns: 1fr auto-fit(min-content, max-content) 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    /* grid-template-rows: repeat(2, auto); */
-}
-
 .user-management__title {
-    font-size: 4rem;
-    grid-column: 2/3;
+    font-size: calc(2rem + 3vw);
+    display: flex;
+    justify-content: center;
 }
 
 .user-management__body {
-    /* grid-row: 2/-1;
-    grid-column: 2/3; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: .5rem;
 }
 
 
 .card {
     border: 1px solid;
-    height: 10rem;
-    /* width: 25rem; */
     position: relative;
 }
 
