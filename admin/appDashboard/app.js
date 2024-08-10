@@ -1,8 +1,20 @@
 const hamburger = document.querySelector('.vertical-nav--burger')
 const container = document.querySelector('.container')
-
-
+const line1 = document.querySelector('.line-1')
+const line2 = document.querySelector('.line-2')
+const t1 = document.querySelector('.t1')
+const t2 = document.querySelector('.t2')
+const line3 = document.querySelector('.line-3')
+const links = document.querySelectorAll('.menu--items__item')
 
 hamburger.addEventListener('click', () => {
     container.classList.toggle('exp')
+    line1.classList.toggle('line-1-gone')
+    t1.classList.toggle('t1-rotate')
+    t2.classList.toggle('t2-rotate')
+    line2.classList.toggle('line-2-gone')
+    line3.classList.toggle('line-3-gone')
+    links.forEach((el, index) => {
+        el.classList.toggle('menu--items__item')
+    })
 })
