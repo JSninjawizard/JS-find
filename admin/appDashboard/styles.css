@@ -84,11 +84,39 @@
     grid-template-columns: 10rem 1fr;
 }
 
-/* !Links */
+/* !@#$ >>>>>>>>>>>>>>>>>>>>>> */
+/* !@#$ >>>>>>>>>>>>>>>> LINKS */
+/* !@#$ >>>>>>>>>>>>>>>>>>>>>> */
 .vertical-nav--menu {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
+.btn {
+    font-size: 1.5rem;
+    border: none;
+    transition: all .2s ease;
+    cursor: pointer;
+    transform: translateX(-3rem);
+    opacity: 0;
+}
+
+.btn:hover {
+    background-color: darkcyan;
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+.btns-show {
+    opacity: 1;
+    transform: translateX(0rem);
+}
+
+/* Deprecated start */
 .menu--items {
     border: 1px solid blue;
     list-style: none;
@@ -113,6 +141,9 @@
     color: darkblue;
     cursor: pointer;
 }
+/* Deprecated end */
+
+
 
 
 /* !MAIN CONTENT */

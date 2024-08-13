@@ -5,7 +5,10 @@ const line2 = document.querySelector('.line-2')
 const t1 = document.querySelector('.t1')
 const t2 = document.querySelector('.t2')
 const line3 = document.querySelector('.line-3')
+//! Deprecated start
 const links = document.querySelectorAll('.menu--items__item')
+//! Deprecated end
+const buttons = document.querySelectorAll('.btn')
 
 hamburger.addEventListener('click', () => {
     container.classList.toggle('exp')
@@ -14,10 +17,21 @@ hamburger.addEventListener('click', () => {
     t2.classList.toggle('t2-rotate')
     line2.classList.toggle('line-2-gone')
     line3.classList.toggle('line-3-gone')
+    //! Deprecated start
     links.forEach((el, index) => {
-        el.classList.toggle('menu--items__item')
+      el.classList.toggle('menu--items__item')
     })
-})
+    //! Deprecated end
+
+    buttons.forEach((el, index) => {
+      el.classList.toggle('btns-show')
+    })
+
+  })
+
+
+
+
 
 const accounts = [
     {
