@@ -285,3 +285,13 @@ main.content {
 footer.footer {
     background-color: darkgoldenrod;
 }
+
+
+
+.user-management__title {
+    opacity: 0;
+    
+}
+.testings {
+    opacity: 1;
+}

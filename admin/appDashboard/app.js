@@ -5,10 +5,9 @@ const line2 = document.querySelector('.line-2')
 const t1 = document.querySelector('.t1')
 const t2 = document.querySelector('.t2')
 const line3 = document.querySelector('.line-3')
-//! Deprecated start
-const links = document.querySelectorAll('.menu--items__item')
-//! Deprecated end
 const buttons = document.querySelectorAll('.btn')
+const usrMgmtTitle = document.querySelector('.user-management__title')
+
 
 hamburger.addEventListener('click', () => {
     container.classList.toggle('exp')
@@ -17,11 +16,7 @@ hamburger.addEventListener('click', () => {
     t2.classList.toggle('t2-rotate')
     line2.classList.toggle('line-2-gone')
     line3.classList.toggle('line-3-gone')
-    //! Deprecated start
-    links.forEach((el, index) => {
-      el.classList.toggle('menu--items__item')
-    })
-    //! Deprecated end
+
 
     buttons.forEach((el, index) => {
       el.classList.toggle('btns-show')
@@ -29,6 +24,98 @@ hamburger.addEventListener('click', () => {
 
   })
 
+  function test () {
+    usrMgmtTitle.classList.add('testings')
+    const usrMgmt = document.querySelector('.user-management__body')
+// const container = document.createElement('div')
+// container.classList.add('container')
+// document.body.appendChild(container)
+
+
+for (const account of accounts) {
+  const card = document.createElement('div')
+  card.classList.add('card')
+
+  const values = Object.values(account)
+  const owner = values.slice(0,1)
+  const job = values.slice(3,4)
+  const fullProfile = owner.concat(job)
+  console.log(fullProfile);
+
+
+  const cardTextDiv = document.createElement('div')
+  cardTextDiv.classList.add('cardTextDiv')
+  fullProfile.forEach(el => {
+    const text = document.createElement('div')
+    text.textContent=el
+    cardTextDiv.appendChild(text)
+  })
+  card.appendChild(cardTextDiv)
+  usrMgmt.appendChild(card)
+
+  const deleteCardDiv = document.createElement('div')
+  deleteCardDiv.classList.add('deleteCardDiv')
+  const trashcan = document.createElement('div')
+  trashcan.innerHTML = '&#128465;'
+  trashcan.classList.add('deleteCard')
+  deleteCardDiv.appendChild(trashcan)
+
+  const promptDiv = document.createElement('div')
+  const promptYes = document.createElement('div')
+  const promptNo = document.createElement('div')
+
+  promptYes.textContent = 'Yes'
+  promptNo.textContent = 'No'
+  promptDiv.classList.add('promptDiv')
+  promptYes.classList.add('promptYes')
+  promptNo.classList.add('promptNo')
+  promptDiv.appendChild(promptYes)
+  promptDiv.appendChild(promptNo)
+
+
+  card.appendChild(deleteCardDiv)
+  card.appendChild(promptDiv)
+  usrMgmt.appendChild(card)
+}
+
+
+const cards = document.querySelectorAll('.card')
+const trashcans = document.querySelectorAll('.deleteCard')
+const deleteCardDivs = document.querySelectorAll('.deleteCardDiv')
+const promptDivs = document.querySelectorAll('.promptDiv')
+const promptYesBtns = document.querySelector('.promptYes')
+const promptNoBtns = document.querySelector('.promptNo')
+
+
+trashcans.forEach((el,index) => {
+  el.addEventListener("click", () => {
+    trashcans[index].classList.add('move-aside-trashcan')
+    deleteCardDivs[index].classList.add('move-aside-delCardDiv')
+    promptDivs[index].classList.add('promptDiv-show')
+
+    promptDivs[index].addEventListener('click', (e) => {
+      const response = e.target.textContent
+      if (response === 'Yes') {
+        console.log('yes was clicked');
+        cards[index].style.display = 'none'
+      } else {
+        console.log('no was clicked');
+        promptDivs[index].classList.remove('promptDiv-show')
+        deleteCardDivs[index].classList.remove('move-aside-delCardDiv')
+        trashcans[index].classList.remove('move-aside-trashcan')
+      }
+    })
+  })
+})
+
+const card = document.querySelector('.card')
+const deleteCardDiv = document.querySelector('.deleteCardDiv')
+const trashcan = document.querySelector('.deleteCard')
+const promptDiv = document.querySelector('.promptDiv')
+const promptYesBtn = document.querySelector('.promptYes')
+const promptNoBtn = document.querySelector('.promptNo')
+
+  }
 
 
 
@@ -171,90 +258,90 @@ const accounts = [
     },
   ];
 
-const usrMgmt = document.querySelector('.user-management__body')
-// const container = document.createElement('div')
-// container.classList.add('container')
-// document.body.appendChild(container)
+// const usrMgmt = document.querySelector('.user-management__body')
+// // const container = document.createElement('div')
+// // container.classList.add('container')
+// // document.body.appendChild(container)
 
-for (const account of accounts) {
-  const card = document.createElement('div')
-  card.classList.add('card')
+// for (const account of accounts) {
+//   const card = document.createElement('div')
+//   card.classList.add('card')
 
-  const values = Object.values(account)
-  const owner = values.slice(0,1)
-  const job = values.slice(3,4)
-  const fullProfile = owner.concat(job)
-  console.log(fullProfile);
-
-
-  const cardTextDiv = document.createElement('div')
-  cardTextDiv.classList.add('cardTextDiv')
-  fullProfile.forEach(el => {
-    const text = document.createElement('div')
-    text.textContent=el
-    cardTextDiv.appendChild(text)
-  })
-  card.appendChild(cardTextDiv)
-  usrMgmt.appendChild(card)
-
-  const deleteCardDiv = document.createElement('div')
-  deleteCardDiv.classList.add('deleteCardDiv')
-  const trashcan = document.createElement('div')
-  trashcan.innerHTML = '&#128465;'
-  trashcan.classList.add('deleteCard')
-  deleteCardDiv.appendChild(trashcan)
-
-  const promptDiv = document.createElement('div')
-  const promptYes = document.createElement('div')
-  const promptNo = document.createElement('div')
-
-  promptYes.textContent = 'Yes'
-  promptNo.textContent = 'No'
-  promptDiv.classList.add('promptDiv')
-  promptYes.classList.add('promptYes')
-  promptNo.classList.add('promptNo')
-  promptDiv.appendChild(promptYes)
-  promptDiv.appendChild(promptNo)
+//   const values = Object.values(account)
+//   const owner = values.slice(0,1)
+//   const job = values.slice(3,4)
+//   const fullProfile = owner.concat(job)
+//   console.log(fullProfile);
 
 
-  card.appendChild(deleteCardDiv)
-  card.appendChild(promptDiv)
-  usrMgmt.appendChild(card)
-}
+//   const cardTextDiv = document.createElement('div')
+//   cardTextDiv.classList.add('cardTextDiv')
+//   fullProfile.forEach(el => {
+//     const text = document.createElement('div')
+//     text.textContent=el
+//     cardTextDiv.appendChild(text)
+//   })
+//   card.appendChild(cardTextDiv)
+//   usrMgmt.appendChild(card)
+
+//   const deleteCardDiv = document.createElement('div')
+//   deleteCardDiv.classList.add('deleteCardDiv')
+//   const trashcan = document.createElement('div')
+//   trashcan.innerHTML = '&#128465;'
+//   trashcan.classList.add('deleteCard')
+//   deleteCardDiv.appendChild(trashcan)
+
+//   const promptDiv = document.createElement('div')
+//   const promptYes = document.createElement('div')
+//   const promptNo = document.createElement('div')
+
+//   promptYes.textContent = 'Yes'
+//   promptNo.textContent = 'No'
+//   promptDiv.classList.add('promptDiv')
+//   promptYes.classList.add('promptYes')
+//   promptNo.classList.add('promptNo')
+//   promptDiv.appendChild(promptYes)
+//   promptDiv.appendChild(promptNo)
 
 
-const cards = document.querySelectorAll('.card')
-const trashcans = document.querySelectorAll('.deleteCard')
-const deleteCardDivs = document.querySelectorAll('.deleteCardDiv')
-const promptDivs = document.querySelectorAll('.promptDiv')
-const promptYesBtns = document.querySelector('.promptYes')
-const promptNoBtns = document.querySelector('.promptNo')
+//   card.appendChild(deleteCardDiv)
+//   card.appendChild(promptDiv)
+//   usrMgmt.appendChild(card)
+// }
 
 
-trashcans.forEach((el,index) => {
-  el.addEventListener("click", () => {
-    trashcans[index].classList.add('move-aside-trashcan')
-    deleteCardDivs[index].classList.add('move-aside-delCardDiv')
-    promptDivs[index].classList.add('promptDiv-show')
+// const cards = document.querySelectorAll('.card')
+// const trashcans = document.querySelectorAll('.deleteCard')
+// const deleteCardDivs = document.querySelectorAll('.deleteCardDiv')
+// const promptDivs = document.querySelectorAll('.promptDiv')
+// const promptYesBtns = document.querySelector('.promptYes')
+// const promptNoBtns = document.querySelector('.promptNo')
 
-    promptDivs[index].addEventListener('click', (e) => {
-      const response = e.target.textContent
-      if (response === 'Yes') {
-        console.log('yes was clicked');
-        cards[index].style.display = 'none'
-      } else {
-        console.log('no was clicked');
-        promptDivs[index].classList.remove('promptDiv-show')
-        deleteCardDivs[index].classList.remove('move-aside-delCardDiv')
-        trashcans[index].classList.remove('move-aside-trashcan')
-      }
-    })
-  })
-})
 
-const card = document.querySelector('.card')
-const deleteCardDiv = document.querySelector('.deleteCardDiv')
-const trashcan = document.querySelector('.deleteCard')
-const promptDiv = document.querySelector('.promptDiv')
-const promptYesBtn = document.querySelector('.promptYes')
-const promptNoBtn = document.querySelector('.promptNo')
+// trashcans.forEach((el,index) => {
+//   el.addEventListener("click", () => {
+//     trashcans[index].classList.add('move-aside-trashcan')
+//     deleteCardDivs[index].classList.add('move-aside-delCardDiv')
+//     promptDivs[index].classList.add('promptDiv-show')
+
+//     promptDivs[index].addEventListener('click', (e) => {
+//       const response = e.target.textContent
+//       if (response === 'Yes') {
+//         console.log('yes was clicked');
+//         cards[index].style.display = 'none'
+//       } else {
+//         console.log('no was clicked');
+//         promptDivs[index].classList.remove('promptDiv-show')
+//         deleteCardDivs[index].classList.remove('move-aside-delCardDiv')
+//         trashcans[index].classList.remove('move-aside-trashcan')
+//       }
+//     })
+//   })
+// })
+
+// const card = document.querySelector('.card')
+// const deleteCardDiv = document.querySelector('.deleteCardDiv')
+// const trashcan = document.querySelector('.deleteCard')
+// const promptDiv = document.querySelector('.promptDiv')
+// const promptYesBtn = document.querySelector('.promptYes')
+// const promptNoBtn = document.querySelector('.promptNo')
