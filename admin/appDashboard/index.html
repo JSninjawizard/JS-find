@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
     <title>Managment</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <aside class="vertical-nav">
-            <div class="vertical-nav--burger">
+      <aside class="vertical-nav">
+
+        <div class="vertical-nav__head">
+            <div class="vertical-nav__hamburger">
                 <div class="line line-1"></div>
                 <div class="line line-2">
                     <div class="t1"></div>
@@ -17,32 +31,48 @@
                 </div>
                 <div class="line line-3"></div>
             </div>
-            <div class="vertical-nav--menu">
-                <!-- <ul class="menu--items">
-                    <li class="menu--items__item link"><a href="#">User Management</a></li>
-                    <li class="menu--items__item link">link 2</li>
-                    <li class="menu--items__item link">link 3</li>
-                    <li class="menu--items__item link"></li>
-                </ul> -->
-                <button onclick="test()" class="btn user-management">User Management</button>
-                <button onclick="link2()" class="btn link-2">Link - 2</button>
-                <button class="btn link-3">Link - 3</button>
-                <button class="btn link-4">Link - 4</button>
+            <div class="vertical-nav__title">Dashboard</div>
+        </div>
+
+        <div class="labels">
+          <div class="labels__label--btn">
+            <i class="fa-solid fa-folder-gear"></i>
+            <button class="btns btn-user-mgmt">User Management</button>
+          </div>
+
+          <div class="labels__label--btn">
+            <i class="fa-solid fa-user-group-crown"></i>
+            <div class="dropdown">
+              <div class="dropdown__upper">
+                <div class="dropdown__upper--title">Admin</div>
+                <i class="fa-regular fa-chevron-right icon"></i>
+              </div>
+              <div class="dropdown__content">
+                <button class="btn btn-admin-list">Admin List</button>
+                <button class="btn btn-admin-add">Add New Admin</button>
+              </div>
             </div>
-        </aside>
-        <main class="content">  
-            <section id="user-management">
-                <div class="user-management__title">User Management</div>
-                <div class="user-management__body"></div>
-            </section>
-            <section id="link-2"></section>
-            <section id="link-3"></section>
-            <section id="link-4"></section>
-        </main>
-        <footer class="footer">This is Footer</footer>
+          </div>
+
+          <div class="labels__label--btn">
+            <i class="fa-solid fa-users"></i>
+            <div class="dropdown">
+              <div class="dropdown__upper">
+                <div class="dropdown__upper--title">Users</div>
+                <i class="fa-regular fa-chevron-right icon"></i>
+              </div>
+              <div class="dropdown__content">
+                <button class="btn btn-admin-list">User List</button>
+                <button class="btn btn-admin-add">Add New User</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="content"></main>
+      <footer class="footer">This is Footer</footer>
     </div>
 
-
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

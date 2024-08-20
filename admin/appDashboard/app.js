@@ -1,28 +1,57 @@
-const hamburger = document.querySelector('.vertical-nav--burger')
+// Hamburger
+const hamburger = document.querySelector('.vertical-nav__hamburger')
 const container = document.querySelector('.container')
 const line1 = document.querySelector('.line-1')
 const line2 = document.querySelector('.line-2')
 const t1 = document.querySelector('.t1')
 const t2 = document.querySelector('.t2')
 const line3 = document.querySelector('.line-3')
-const buttons = document.querySelectorAll('.btn')
-const usrMgmtTitle = document.querySelector('.user-management__title')
+// Nav title
+const navTitle = document.querySelector('.vertical-nav__title')
 
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', (e) => {
+  console.log(e);
     container.classList.toggle('exp')
     line1.classList.toggle('line-1-gone')
     t1.classList.toggle('t1-rotate')
     t2.classList.toggle('t2-rotate')
     line2.classList.toggle('line-2-gone')
     line3.classList.toggle('line-3-gone')
+  
+  navTitle.classList.toggle('show-title')
+  })
 
+  const dropdownsUpper = document.querySelectorAll('.dropdown__upper')
+  const dropdownsContent = document.querySelectorAll('.dropdown__content')
+  const icons = document.querySelectorAll('.icon')
+  console.log(icons);
 
-    buttons.forEach((el, index) => {
-      el.classList.toggle('btns-show')
+dropdownsUpper.forEach((dropDownUpper, i) => {
+  dropDownUpper.addEventListener('click', (e) => {
+    
+    icons.forEach((icon, index) => {
+      if (i === index) {
+        icon.classList.toggle('deg90')
+
+        dropdownsContent.forEach((dropDownContent , ind) => {
+          dropDownContent.classList.remove('show-content')
+          if (index === ind) {
+            // dropDownContent.classList.toggle('show-content')
+            dropdownsContent[ind].classList.add('show-content')
+          } 
+        })
+
+      }
     })
 
   })
+});
+
+// dropdownUpper.addEventListener('click', () => {
+//   icon.classList.toggle('deg90')
+// })
+
 
   function test () {
     usrMgmtTitle.classList.add('testings')
