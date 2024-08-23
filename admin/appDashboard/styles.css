@@ -29,24 +29,6 @@
     position: relative;
 }
 
-/* !* >>>>>>>>>>>>>>>>>>>>>> */
-/* !* >>>>>>>>>>>>>>>> TITLE */
-/* !* >>>>>>>>>>>>>>>>>>>>>> */
-
-.vertical-nav__title {
-    font-size: 2rem;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position:absolute;
-    transform: translateX(-10rem);
-}
-
-.show-title {
-    transform: translateX(1.5rem);
-}
-
 /* !@* >>>>>>>>>>>>>>>>>>>>>>>>>>> */
 /* !@* >>>>>>>>>>>>>>>> HAMBURGER */
 /* !@* >>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -59,6 +41,7 @@
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
+    position: absolute;
 }
 
 .line {
@@ -111,9 +94,43 @@
     grid-template-columns: 13rem 1fr;
 }
 
+/* !* >>>>>>>>>>>>>>>>>>>>>> */
+/* !* >>>>>>>>>>>>>>>> TITLE */
+/* !* >>>>>>>>>>>>>>>>>>>>>> */
+
+.vertical-nav__title {
+    font-size: 2rem;
+    background-color: greenyellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+    margin-left: 3rem;
+}
+
 /* !@#$ >>>>>>>>>>>>>>>>>>>>>> */
 /* !@#$ >>>>>>>>>>>>>>>> LINKS */
 /* !@#$ >>>>>>>>>>>>>>>>>>>>>> */
+.labels__label--btn {
+    border: 1px solid red;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-icon {
+    font-size: 2rem;
+    border: 1px solid;
+}
+
+.label-mgmt {
+    border: 2px solid orange;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.btn-mgmt {
+
+}
 
 .dropdown__upper--title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -136,12 +153,6 @@
     gap: .5rem;
 }
 
-.labels__label--btn {
-    border: 1px solid red;
-    display: flex;
-    gap: 1rem;
-
-}
 
 
 
@@ -343,7 +354,7 @@ footer.footer {
 
 
 .btns .btn-user-mgmt {}
-          
+
 
 .labels__label--btn {
     display: flex;
@@ -359,9 +370,10 @@ footer.footer {
 }
 
 .dropdown__upper {
-    display: flex;    
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -369,7 +381,7 @@ footer.footer {
     border: 2px solid salmon;
     display: flex;
     flex-direction: column;
-    max-height: 0; 
+    max-height: 0;
     overflow: hidden;
     transition: max-height .3s ease;
 }
@@ -385,5 +397,5 @@ footer.footer {
 
 .deg90 {
     transform: rotate(90deg);
-    
+
 }

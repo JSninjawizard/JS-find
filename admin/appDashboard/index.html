@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
-    />
 
-    <link rel="stylesheet" href="styles.css" />
-    <title>Managment</title>
-  </head>
-  <body>
-    <div class="container">
-      <aside class="vertical-nav">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" />
 
-        <div class="vertical-nav__head">
-            <div class="vertical-nav__hamburger">
-                <div class="line line-1"></div>
-                <div class="line line-2">
-                    <div class="t1"></div>
-                    <div class="t2"></div>
-                </div>
-                <div class="line line-3"></div>
-            </div>
-            <div class="vertical-nav__title">Dashboard</div>
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-09b459cf485d4b1f3304947240314c05.css?vsn=d">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
+
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Managment</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <aside class="vertical-nav">
+      <div class="vertical-nav__head">
+        <div class="vertical-nav__hamburger">
+          <div class="line line-1"></div>
+          <div class="line line-2">
+            <div class="t1"></div>
+            <div class="t2"></div>
+          </div>
+          <div class="line line-3"></div>
         </div>
 
-        <div class="labels">
-          <div class="labels__label--btn">
-            <i class="fa-solid fa-folder-gear"></i>
-            <button class="btns btn-user-mgmt">User Management</button>
-          </div>
+        <div class="vertical-nav__title">
+          <div class="text">Dashboard</div>
+        </div>
+      </div>
 
-          <div class="labels__label--btn">
-            <i class="fa-solid fa-user-group-crown"></i>
-            <div class="dropdown">
-              <div class="dropdown__upper">
-                <div class="dropdown__upper--title">Admin</div>
-                <i class="fa-regular fa-chevron-right icon"></i>
-              </div>
-              <div class="dropdown__content">
-                <button class="btn btn-admin-list">Admin List</button>
-                <button class="btn btn-admin-add">Add New Admin</button>
-              </div>
-            </div>
-          </div>
+      <div class="labels">
 
-          <div class="labels__label--btn">
-            <i class="fa-solid fa-users"></i>
-            <div class="dropdown">
-              <div class="dropdown__upper">
-                <div class="dropdown__upper--title">Users</div>
-                <i class="fa-regular fa-chevron-right icon"></i>
-              </div>
-              <div class="dropdown__content">
-                <button class="btn btn-admin-list">User List</button>
-                <button class="btn btn-admin-add">Add New User</button>
-              </div>
+        <div class="labels__label--btn">
+          <i class="fa-sharp fa-solid fa-gamepad main-icon"></i>
+          <div class="dropdown">
+            <div class="dropdown__upper">
+              <div class="dropdown__upper--title">User Management</div>
+
             </div>
           </div>
         </div>
-      </aside>
-      <main class="content"></main>
-      <footer class="footer">This is Footer</footer>
-    </div>
 
-    <script src="app.js"></script>
-  </body>
+
+
+
+        <div class="labels__label--btn">
+          <i class="fa-solid fa-user-group-crown main-icon"></i>
+          <div class="dropdown">
+            <div class="dropdown__upper">
+              <div class="dropdown__upper--title">Admin</div>
+              <i class="fa-regular fa-chevron-right icon"></i>
+            </div>
+            <div class="dropdown__content">
+              <button class="btn btn-admin-list">Admin List</button>
+              <button class="btn btn-admin-add">Add New Admin</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="labels__label--btn">
+          <i class="fa-solid fa-users main-icon"></i>
+          <div class="dropdown">
+            <div class="dropdown__upper">
+              <div class="dropdown__upper--title">Users</div>
+              <i class="fa-regular fa-chevron-right icon"></i>
+            </div>
+            <div class="dropdown__content">
+              <button class="btn btn-admin-list">User List</button>
+              <button class="btn btn-admin-add">Add New User</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="content"></main>
+    <footer class="footer">This is Footer</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
 </html>

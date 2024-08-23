@@ -6,20 +6,21 @@ const line2 = document.querySelector('.line-2')
 const t1 = document.querySelector('.t1')
 const t2 = document.querySelector('.t2')
 const line3 = document.querySelector('.line-3')
-// Nav title
-const navTitle = document.querySelector('.vertical-nav__title')
 
+const body = document.querySelector('body')
+body.addEventListener('click', (e) => {
+  console.log(e.target);
+})
 
 hamburger.addEventListener('click', (e) => {
-  console.log(e);
+  console.log(e.target);
     container.classList.toggle('exp')
     line1.classList.toggle('line-1-gone')
     t1.classList.toggle('t1-rotate')
     t2.classList.toggle('t2-rotate')
     line2.classList.toggle('line-2-gone')
     line3.classList.toggle('line-3-gone')
-  
-  navTitle.classList.toggle('show-title')
+
   })
 
   const dropdownsUpper = document.querySelectorAll('.dropdown__upper')
@@ -29,7 +30,7 @@ hamburger.addEventListener('click', (e) => {
 
 dropdownsUpper.forEach((dropDownUpper, i) => {
   dropDownUpper.addEventListener('click', (e) => {
-    
+
     icons.forEach((icon, index) => {
       if (i === index) {
         icon.classList.toggle('deg90')
@@ -39,7 +40,7 @@ dropdownsUpper.forEach((dropDownUpper, i) => {
           if (index === ind) {
             // dropDownContent.classList.toggle('show-content')
             dropdownsContent[ind].classList.add('show-content')
-          } 
+          }
         })
 
       }
