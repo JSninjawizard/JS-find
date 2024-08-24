@@ -110,30 +110,74 @@
 /* !@#$ >>>>>>>>>>>>>>>> LINKS */
 /* !@#$ >>>>>>>>>>>>>>>>>>>>>> */
 .labels__label--btn {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     gap: 1rem;
+    
+     background-color: antiquewhite;
 }
 
 .main-icon {
     font-size: 2rem;
-    border: 1px solid;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
 .label-mgmt {
     border: 2px solid orange;
     display: flex;
     justify-content: space-between;
+}
 
+.dropdown__upper {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgba(137, 43, 226, 0.346);
+}
+
+/* !@#$ >>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/* !@#$ >>>>>>>>>>>>>>>> NO DROPDOWN */
+/* !@#$ >>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.no-dropdown {
+    border: 1px solid;
+    width: 100%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    height: 2.5rem;
+}
+
+.btn-management {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: start;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
 }
 
 
-.btn-mgmt {
 
+.btn-mgmt {
+    
 }
 
 .dropdown__upper--title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown__content > * {
@@ -142,6 +186,8 @@
     border: none;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
+    height: 2.5rem;
 }
 
 .btn:hover {
@@ -350,17 +396,10 @@ footer.footer {
 
 
 
-.labels__label--btn {}
 
 
 .btns .btn-user-mgmt {}
 
-
-.labels__label--btn {
-    display: flex;
-    gap: .5rem;
-
-}
 
 .fa-solid .fa-user-group-crown {}
 
@@ -369,13 +408,6 @@ footer.footer {
     width: 80%;
 }
 
-.dropdown__upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-
-}
 
 .dropdown__content {
     border: 2px solid salmon;
