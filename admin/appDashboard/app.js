@@ -38,8 +38,10 @@ dropdownsUpper.forEach((dropDownUpper, i) => {
         dropdownsContent.forEach((dropDownContent , ind) => {
           dropDownContent.classList.remove('show-content')
           if (index === ind) {
-            // dropDownContent.classList.toggle('show-content')
-            dropdownsContent[ind].classList.add('show-content')
+            dropDownContent.classList.remove('show-content')
+            dropdownsContent[ind].classList.toggle('show-content')
+          } else {
+
           }
         })
 
